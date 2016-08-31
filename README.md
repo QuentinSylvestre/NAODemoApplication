@@ -14,7 +14,13 @@ The following services are available in NAOSDK:
 
 ## NAODemoApplication
 
-To run the provided example project, clone or download the repo, and run `pod install` from the `Example` directory first. Then, open the `NAODemoApplication.xcworkspace` file into Xcode.
+To run the provided example project, clone or download the repo, and run:
+
+```bash
+$ cd Example
+$ pod install
+$ open NAODemoApplication.xcworkspace
+```
 
 ## CocoaPods
 
@@ -29,15 +35,6 @@ pod "NAOSDK"
 * Xcode 7 or higher
 * CocoaPods
 * iOS 8.0 or higher
-
-## Installation
-
-NAOSDK is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod "NAOSDK"
-```
 
 ## License
 
