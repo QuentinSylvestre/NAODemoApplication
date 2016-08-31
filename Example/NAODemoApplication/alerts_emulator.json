@@ -1,0 +1,21 @@
+{
+  "period": "5",
+  "alerts": [
+    {
+      "name": "Enter Guillaume",
+      "content": ""
+    },
+    {
+      "name": "Exit Guillaume",
+      "content": ""
+    },
+    {
+      "name": "Enter Jean",
+      "content": ""
+    },
+    {
+      "name": "Exit Jean",
+      "content": ""
+    }
+  ]
+}

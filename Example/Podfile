@@ -1,0 +1,9 @@
+use_frameworks!
+
+target 'NAODemoApplication' do
+  pod 'NAOSDK', :path => '../'
+end
+
+target 'NAODemoApplicationUITests' do
+  pod 'NAOSDK', :path => '../'
+end

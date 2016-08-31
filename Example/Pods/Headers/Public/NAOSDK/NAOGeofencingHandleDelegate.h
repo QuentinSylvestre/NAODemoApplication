@@ -1,0 +1,1 @@
+../../../../../NAOSDK/Classes/NAOGeofencingHandleDelegate.h

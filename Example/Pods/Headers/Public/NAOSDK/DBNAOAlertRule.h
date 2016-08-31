@@ -1,0 +1,1 @@
+../../../../../NAOSDK/Classes/DBNAOAlertRule.h
