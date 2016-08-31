@@ -263,10 +263,3 @@ This class will be used by all the NAO Services:
 ```objective_c
 [NAOServicesConfig setRootUrl("YOUR_SERVER_URL")];
 ```
-
-### Demo Application
-
-Source code for a Demo App is available [here](https://bitbucket.org/polestarusa/ios/src).  
-This code shows how to use and integrate all the services of the NAO SDK.   
-As explained above, only the Geofencing and Location services have an emulator API Key and can be demoed out of the box.   
-If you want to test other services you will have to create a site on NAO Cloud and obtain a valid API Key .
