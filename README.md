@@ -1,15 +1,7 @@
-# NAOSDK
+# NAOSDK for iOS
 [![Version](https://img.shields.io/cocoapods/v/NAOSDK.svg?style=flat)](http://cocoapods.org/pods/NAOSDK)
 [![License](https://img.shields.io/cocoapods/l/NAOSDK.svg?style=flat)](http://cocoapods.org/pods/NAOSDK)
 [![Platform](https://img.shields.io/cocoapods/p/NAOSDK.svg?style=flat)](http://cocoapods.org/pods/NAOSDK)
-
-The following services are available in NAOSDK:
-
-- Location Service
-- Geofencing Service
-- Beacon Proximity Service
-- Analytics Service
-- Beacon Maintenance and Reporting Service
 
 ### Requirements
 * Xcode 7 or higher
