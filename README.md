@@ -30,10 +30,9 @@ $ pod install
 $ open NAODemoApplication.xcworkspace
 ```
 
-## Add NAOSDK to your project with CocoaPods
+# Add NAOSDK to your project with CocoaPods
 To add NAOSDK to your project, simply add the following line to your Podfile:
 ```ruby
 pod "NAOSDK"
 ```
 Then, [configure your Xcode project](http://docs.nao-cloud.com/dev/Getting_started/NAO_SDK_iOS/#configure-your-xcode-project/).
-
