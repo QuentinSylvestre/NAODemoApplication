@@ -11,7 +11,7 @@ The following services are available in NAOSDK:
 - Analytics Service
 - Beacon Maintenance and Reporting Service
 
-## Requirements
+### Requirements
 * Xcode 7 or higher
 * iOS 8.0 or higher
 * [CocoaPods](http://cocoapods.org/) package manager:
@@ -19,7 +19,7 @@ The following services are available in NAOSDK:
 $ [sudo] gem install cocoapods
 ```
 
-## License
+### License
 See the LICENSE file for more info.
 
 # Building demo application
@@ -30,9 +30,11 @@ $ pod install
 $ open NAODemoApplication.xcworkspace
 ```
 
-# Add NAOSDK to your project with CocoaPods
+# Adding NAOSDK to your project with CocoaPods
 To add NAOSDK to your project, simply add the following line to your Podfile:
 ```ruby
-pod "NAOSDK"
+target 'MyApp' do
+  pod 'NAOSDK'
+end
 ```
 Then, [configure your Xcode project](http://docs.nao-cloud.com/dev/Getting_started/NAO_SDK_iOS/#configure-your-xcode-project/).
