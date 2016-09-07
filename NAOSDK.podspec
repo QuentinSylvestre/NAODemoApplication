@@ -27,7 +27,7 @@ The following services are available in NAOSDK:
 - Beacon Maintenance and Reporting Service
                        DESC
 
-  s.homepage         = 'https://docs.nao-cloud.com/'
+  s.homepage         = 'http://docs.nao-cloud.com/'
   s.license          = { :type => 'POLESTAR', :file => 'LICENSE' }
   s.author           = { 'Pole Star' => 'support@polestar.eu' }
   s.source           = { :git => 'https://bitbucket.org/polestarusa/naosdk.git', :tag => s.version.to_s }
