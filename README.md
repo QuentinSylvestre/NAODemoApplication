@@ -1,18 +1,75 @@
-# NAOSDK for iOS
+#NAOSDK for iOS - Integration Guide
 [![Version](https://img.shields.io/cocoapods/v/NAOSDK.svg?style=flat)](http://cocoapods.org/pods/NAOSDK)
 [![License](https://img.shields.io/cocoapods/l/NAOSDK.svg?style=flat)](http://cocoapods.org/pods/NAOSDK)
 [![Platform](https://img.shields.io/cocoapods/p/NAOSDK.svg?style=flat)](http://cocoapods.org/pods/NAOSDK)
+
+This page describes how to integrate NAOSDK into your application using CocoaPods
 
 ### Requirements
 * Xcode 7 or higher
 * iOS 8.0 or higher
 * [CocoaPods](http://cocoapods.org/) package manager:
-``` bash
-$ [sudo] gem install cocoapods
+
+##Install
+
+```
+#!bash
+
+$ sudo gem install cocoapods
+
 ```
 
-### License
-See the LICENSE file for more info.
+##Get Started
+
+### 1- pod init
+
+Creates a Podfile for the current directory if none currently exists. If an XCODEPROJ project file is specified or if there is only a single project file in the current directory, targets will be automatically generated based on targets defined in the project.
+
+```
+#!bash
+
+$ pod init
+
+```
+
+
+### 2- Update Podfile
+
+List the dependencies in Podfile in your Xcode project directory:
+
+```
+#!bash
+
+target 'MyApp' do
+
+pod 'NAOSDK'
+
+end
+
+```
+
+### 3- pod install
+
+Now you can install the dependencies in your project:
+
+```
+#!bash
+
+$ pod install
+
+```
+
+Make sure to always open the Xcode workspace instead of the project file when building your project:
+
+```
+#!bash
+
+$ open App.xcworkspace
+
+```
+
+Then, [configure your Xcode project](http://docs.nao-cloud.com/dev/Getting_started/NAO_SDK_iOS/#configure-your-xcode-project/).
+
 
 # Building demo application
 To run the provided sample project (NAODemoApplication), clone or download this repo, and run:
@@ -20,13 +77,3 @@ To run the provided sample project (NAODemoApplication), clone or download this 
 $ cd Example
 $ pod install
 $ open NAODemoApplication.xcworkspace
-```
-
-# Adding NAOSDK to your project with CocoaPods
-To add NAOSDK to your project, simply add the following line to your Podfile:
-```ruby
-target 'MyApp' do
-  pod 'NAOSDK'
-end
-```
-Then, [configure your Xcode project](http://docs.nao-cloud.com/dev/Getting_started/NAO_SDK_iOS/#configure-your-xcode-project/).
