@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <NAOSDK/NAOSDK.h>
+#import "NAOLocationHandle.h"
+#import "NAOLocationHandleDelegate.h"
+#import "NAOSyncDelegate.h"
+#import "NAOSensorsDelegate.h"
 
 #define KEY_PARKING_SLOT @"smartpark_parking_slot"
 

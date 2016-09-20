@@ -9,7 +9,9 @@
 #import "AppDelegate.h"
 #import "SmartPark.h"
 #import "MapViewController.h"
-#import <NAOSDK/NAOSDK.h>
+
+#import "NaoContext.h"
+#import "NAOServicesConfig.h"
 
 #import <AudioToolbox/AudioServices.h>
 
@@ -26,8 +28,12 @@
       
     if ([launchOptions objectForKey:UIApplicationLaunchOptionsLocationKey]) {
         NSLog(@"NaoDemoApplication : AppDelegate : restart by iBeacon");
-        SmartPark *smartPark = [[SmartPark alloc] init];
-        [smartPark startLocation];
+        NSString *key = [[NSUserDefaults standardUserDefaults] objectForKey:SMART_PARK_MODE];
+        if (key != nil && [key isEqualToString:SMART_PARK_ON]) {
+            NSLog(@"NaoDemoApplication : AppDelegate : restart SmartPark");
+            SmartPark *smartPark = [[SmartPark alloc] init];
+            [smartPark startLocation];
+        }
     }
     
     UILocalNotification *notification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];

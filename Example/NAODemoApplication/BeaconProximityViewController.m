@@ -15,6 +15,8 @@
 @implementation BeaconProximityViewController {
     NSString *apiKey;
     UIActivityIndicatorView *spinner;
+    BOOL startButtonState;
+    BOOL stopButtonState;
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -29,11 +31,23 @@
     [self.versionLabel setText:[NSString stringWithFormat:@"Version : %@", [NAOServicesConfig getSoftwareVersion]]];
     
     self.notificationManager = [[NotificationManager alloc] init];
+    
+    stopButtonState = NO;
+    startButtonState = YES;
+    [self.stopButton setEnabled:stopButtonState];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    if (self.isMovingFromParentViewController || self.isBeingDismissed) {
+        [self stop];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,11 +56,19 @@
 }
 
 - (IBAction)StartBeaconProximityServiceButtonClicked:(id)sender {
+    [self enableStopButton];
+    
     [self.beaconProximityHandle start];
 }
 
 
 - (IBAction)StopBeaconProximityServiceButtonClicked:(id)sender {
+    [self enableStartButton];
+    
+    [self stop];
+}
+
+- (void) stop {
     [self.beaconProximityHandle stop];
 }
 
@@ -73,11 +95,25 @@
 }
 
 - (void)dismissAfterSynchro {
-    [self.startButton setEnabled:YES];
-    [self.stopButton setEnabled:YES];
+    [self.startButton setEnabled:startButtonState];
+    [self.stopButton setEnabled:stopButtonState];
     [self.synchronyzeButton setEnabled:YES];
     
     [spinner stopAnimating];
+}
+
+- (void)enableStartButton {
+    startButtonState = YES;
+    stopButtonState = NO;
+    [self.startButton setEnabled:startButtonState];
+    [self.stopButton setEnabled:stopButtonState];
+}
+
+- (void)enableStopButton {
+    startButtonState = NO;
+    stopButtonState = YES;
+    [self.startButton setEnabled:startButtonState];
+    [self.stopButton setEnabled:stopButtonState];
 }
 
 #pragma mark - NAOSyncDelegate
@@ -100,9 +136,12 @@
     [self dismissAfterSynchro];
 }
 
+
 #pragma mark - NAOBeaconProximityHandleDelegate
 
 - (void) didFailWithErrorCode:(DBNAOERRORCODE)errCode andMessage:(NSString*)message {
+    [self enableStartButton];
+    
     NSString *errorText = [NSString stringWithFormat:@"errorCode:%ld  message:%@", (long)errCode, message];
     NSLog(@"NAODemoApp : %@ : %@ : %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), errorText);
     [self.notificationManager displayNotificationWithMessage:[NSString stringWithFormat:@"%@ :%@", NSStringFromSelector(_cmd), errorText]];

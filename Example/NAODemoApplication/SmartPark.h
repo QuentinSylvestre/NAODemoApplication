@@ -7,8 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <NAOSDK/NAOSDK.h>
+#import "NAOLocationHandle.h"
+#import "NAOLocationHandleDelegate.h"
+#import "NAOGeofencingHandle.h"
+#import "NAOGeofencingHandleDelegate.h"
+#import "NAOSyncDelegate.h"
+#import "NAOSensorsDelegate.h"
 #import "NotificationManager.h"
+
+#define SMART_PARK_MODE     @"SmartParkMode"
+#define SMART_PARK_ON       @"SmartParkOn"
+#define SMART_PARK_OFF      @"SmartParkOff"
 
 #define LOCATION_COUNT_BEFORE_EXIT_CAR      5
 #define PARKING_SLOT                        @"J3-E4"

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <NAOSDK/NAOSDK.h>
+#import "NAOSyncDelegate.h"
+#import "NAOLocationHandle.h"
 #import "NotificationManager.h"
 
 @interface SmartParkMainViewController : UIViewController <NAOSyncDelegate>

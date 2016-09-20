@@ -8,6 +8,11 @@
 
 #import "SmartPark.h"
 
+#import "NAOServicesConfig.h"
+
+#import "NaoContext.h"
+#import "NAOServicesConfig.h"
+
 @interface SmartPark ()
 
 @end
@@ -24,6 +29,10 @@
         apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
         locationCount = 0;
         isEnteredPark = NO;
+        
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:SMART_PARK_ON forKey:SMART_PARK_MODE];
+        [userDefaults synchronize];
     }
     return self;
 }

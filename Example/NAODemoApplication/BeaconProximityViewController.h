@@ -10,6 +10,7 @@
 #import <NAOSDK/NAOSDK.h>
 #import "NotificationManager.h"
 
+
 @interface BeaconProximityViewController : UIViewController <NAOBeaconProximityHandleDelegate, NAOSyncDelegate, NAOSensorsDelegate>
 
 @property NAOBeaconProximityHandle* beaconProximityHandle;

@@ -10,6 +10,7 @@
 #import <NAOSDK/NAOSDK.h>
 #import "NotificationManager.h"
 
+
 @interface AllServicesViewController : UIViewController<NAOAnalyticsHandleDelegate, NAOBeaconProximityHandleDelegate, NAOBeaconReportingHandleDelegate, NAOGeofencingHandleDelegate, NAOLocationHandleDelegate, NAOSyncDelegate, NAOSensorsDelegate>
 
 @property NAOLocationHandle* locationHandle;

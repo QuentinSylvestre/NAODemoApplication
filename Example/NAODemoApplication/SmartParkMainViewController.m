@@ -8,6 +8,8 @@
 
 #import "SmartParkMainViewController.h"
 
+#import "NAOServicesConfig.h"
+
 @interface SmartParkMainViewController ()
 
 @end

@@ -15,6 +15,8 @@
 @implementation AnalyticsViewController {
     NSString *apiKey;
     UIActivityIndicatorView *spinner;
+    BOOL startButtonState;
+    BOOL stopButtonState;
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -29,11 +31,23 @@
     [self.versionLabel setText:[NSString stringWithFormat:@"Version : %@", [NAOServicesConfig getSoftwareVersion]]];
     
     self.notificationManager = [[NotificationManager alloc] init];
+    
+    stopButtonState = NO;
+    startButtonState = YES;
+    [self.stopButton setEnabled:stopButtonState];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    if (self.isMovingFromParentViewController || self.isBeingDismissed) {
+        [self stop];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,16 +56,24 @@
 }
 
 - (IBAction)StartAnalyticsServiceButtonClicked:(id)sender {
+    [self enableStopButton];
+    
     [self.analyticsHandle start];
 }
 
 - (IBAction)StopAnalyticsServiceButtonClicked:(id)sender {
-    [self.analyticsHandle stop];
+    [self enableStartButton];
+    
+    [self stop];
     //[NAOServicesConfig uploadNAOLogInfo];
 }
 - (IBAction)synchronyzeButtonClicked:(id)sender {
     [self waitForSynchro];
     [self.analyticsHandle synchronizeData:self];
+}
+
+- (void) stop {
+    [self.analyticsHandle stop];
 }
 
 - (void)resetErrorLabel {
@@ -72,16 +94,32 @@
 }
 
 - (void)dismissAfterSynchro {
-    [self.startButton setEnabled:YES];
-    [self.stopButton setEnabled:YES];
+    [self.startButton setEnabled:startButtonState];
+    [self.stopButton setEnabled:stopButtonState];
     [self.synchronyzeButton setEnabled:YES];
     
     [spinner stopAnimating];
 }
 
+- (void)enableStartButton {
+    startButtonState = YES;
+    stopButtonState = NO;
+    [self.startButton setEnabled:startButtonState];
+    [self.stopButton setEnabled:stopButtonState];
+}
+
+- (void)enableStopButton {
+    startButtonState = NO;
+    stopButtonState = YES;
+    [self.startButton setEnabled:startButtonState];
+    [self.stopButton setEnabled:stopButtonState];
+}
+
 #pragma mark - NAOAnalyticsHandleDelegate
 
 - (void) didFailWithErrorCode:(DBNAOERRORCODE)errCode andMessage:(NSString *)message {
+    [self enableStartButton];
+    
     NSString *errorText = [NSString stringWithFormat:@"errorCode:%ld  message:%@", (long)errCode, message];
     NSLog(@"NAODemoApp : %@ : %@ : %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), errorText);
     [self.notificationManager displayNotificationWithMessage:[NSString stringWithFormat:@"%@ : %@", NSStringFromSelector(_cmd), errorText]];

@@ -11,6 +11,8 @@
 @implementation IndoorLocationViewController {
     NSString *apiKey;
     UIActivityIndicatorView *spinner;
+    BOOL startButtonState;
+    BOOL stopButtonState;
 }
 
 @synthesize locationHandle;
@@ -27,7 +29,13 @@
     statusLabel.text = @"Status: status";
     
     if (self.locationHandle == nil) {
-        self.locationHandle = [[NAOLocationHandle alloc] initWithKey:apiKey delegate:self sensorsDelegate:self];
+        [self startWaiting];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                self.locationHandle = [[NAOLocationHandle alloc] initWithKey:apiKey delegate:self sensorsDelegate:self];
+                [self performSelectorOnMainThread:@selector(stopWaiting) withObject:nil waitUntilDone:YES];
+            });
+        });
     }
     
     [self resetErrorLabel];
@@ -35,6 +43,10 @@
     [self.versionLabel setText:[NSString stringWithFormat:@"Version : %@", [NAOServicesConfig getSoftwareVersion]]];
     
     self.notificationManager = [[NotificationManager alloc] init];
+    
+    stopButtonState = NO;
+    startButtonState = YES;
+    [self.stopButton setEnabled:stopButtonState];
 }
 
 -(void) viewDidAppear:(BOOL)animated {
@@ -42,7 +54,11 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
-
+    [super viewWillDisappear:animated];
+    
+    if (self.isMovingFromParentViewController || self.isBeingDismissed) {
+        [self stopLoc];
+    }
 }
 
 - (IBAction)stubModeSwitch:(id)sender {
@@ -61,15 +77,19 @@
 }
 
 - (IBAction)Start:(id)sender {
+    [self enableStopButton];
+    
     [self.locationHandle start];
 }
 
 - (IBAction)stop:(id)sender {
+    [self enableStartButton];
+    
     [self stopLoc];
 }
 
 - (IBAction)SynchronyzeButtonClicked:(id)sender {
-    [self waitForSynchro];
+    [self startWaiting];
     [self.locationHandle synchronizeData:self];
 }
 
@@ -84,7 +104,7 @@
     [self.errorLabel setHidden:YES];
 }
 
-- (void)waitForSynchro {
+- (void)startWaiting {
     [self.startButton setEnabled:NO];
     [self.stopButton setEnabled:NO];
     [self.synchronyzeButton setEnabled:NO];
@@ -96,12 +116,13 @@
     [spinner startAnimating];
 }
 
-- (void)dismissAfterSynchro {
-    [self.startButton setEnabled:YES];
-    [self.stopButton setEnabled:YES];
+- (void)stopWaiting {
+    [self.startButton setEnabled:startButtonState];
+    [self.stopButton setEnabled:stopButtonState];
     [self.synchronyzeButton setEnabled:YES];
     
     [spinner stopAnimating];
+    [spinner removeFromSuperview];
 }
 
 - (void)onEnterBackground {
@@ -118,6 +139,20 @@
     }
 }
 
+- (void)enableStartButton {
+    startButtonState = YES;
+    stopButtonState = NO;
+    [self.startButton setEnabled:startButtonState];
+    [self.stopButton setEnabled:stopButtonState];
+}
+
+- (void)enableStopButton {
+    startButtonState = NO;
+    stopButtonState = YES;
+    [self.startButton setEnabled:startButtonState];
+    [self.stopButton setEnabled:stopButtonState];
+}
+
 #pragma mark - NAOLocationHandleDelegate
 
 - (void) didLocationChange:(CLLocation *)location {
@@ -127,6 +162,8 @@
 }
 
 - (void) didFailWithErrorCode:(DBNAOERRORCODE)errCode andMessage:(NSString *)message {
+    [self enableStartButton];
+    
     NSString *errorText = [NSString stringWithFormat:@"errorCode:%ld  message:%@", (long)errCode, message];
     NSLog(@"NAODemoApp : %@ : %@ : %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), errorText);
     [self.notificationManager displayNotificationWithMessage:[NSString stringWithFormat:@"%@ : %@", NSStringFromSelector(_cmd), errorText]];
@@ -183,7 +220,7 @@
     [self.notificationManager displayNotificationWithMessage:[NSString stringWithFormat:@"%@", NSStringFromSelector(_cmd)]];
     
     [self resetErrorLabel];
-    [self dismissAfterSynchro];
+    [self stopWaiting];
 }
 
 - (void)  didSynchronizationFailure:(DBNAOERRORCODE)errorCode msg:(NSString*) message {
@@ -193,7 +230,7 @@
 
     [self.errorLabel setText:errorText];
     [self.errorLabel setHidden:NO];
-    [self dismissAfterSynchro];
+    [self stopWaiting];
 }
 
 #pragma mark - NAOSensorsDelegate

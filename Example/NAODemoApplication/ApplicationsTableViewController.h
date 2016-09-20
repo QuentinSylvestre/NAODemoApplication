@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
 // You can use this default key: @"rnKk22vZHX5tKuKjQiyBg"
-// #define DEFAULT_KEY_VALUE     @"YOUR_API_KEY"
+// #define DEFAULT_KEY_VALUE @"YOUR_APP_KEY"
 #ifndef DEFAULT_KEY_VALUE
 #  error "Please uncomment the line above, and set your API key (or use the provided key)."
 #endif

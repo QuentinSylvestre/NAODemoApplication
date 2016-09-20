@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <NAOSDK/NAOSDK.h>
-
 #import "NotificationManager.h"
+
 
 @interface AnalyticsViewController : UIViewController <NAOSyncDelegate, NAOAnalyticsHandleDelegate, NAOSensorsDelegate>
 

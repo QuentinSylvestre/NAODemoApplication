@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <NAOSDK/NAOSDK.h>
+#import "NAOSyncDelegate.h"
 #import "GeofencingSynchroManagerDelegate.h"
 
 @interface GeofencingSynchroManager : NSObject <NAOSyncDelegate>

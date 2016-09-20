@@ -7,6 +7,8 @@
 //
 
 #import "MapViewController.h"
+
+#import "NAOServicesConfig.h"
 #import "SmartPark.h"
 
 @interface MapViewController ()

@@ -11,6 +11,8 @@
 @implementation AllServicesViewController{
     NSString *apiKey;
     UIActivityIndicatorView *spinner;
+    BOOL startButtonState;
+    BOOL stopButtonState;
 }
 
 @synthesize locationHandle;
@@ -47,6 +49,10 @@
     [self.versionLabel setText:[NSString stringWithFormat:@"Version : %@", [NAOServicesConfig getSoftwareVersion]]];
     
     self.notificationManager = [[NotificationManager alloc] init];
+    
+    stopButtonState = NO;
+    startButtonState = YES;
+    [self.stopButton setEnabled:stopButtonState];
 }
 
 -(void) viewDidAppear:(BOOL)animated {
@@ -54,7 +60,29 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
     
+    if (self.isMovingFromParentViewController || self.isBeingDismissed) {
+        [self stop];
+    }
+}
+
+- (void)stop {
+    if (self.locationHandle != nil) {
+        [self stopLoc];
+    }
+    if (self.geofencingHandle != nil) {
+        [self.geofencingHandle stop];
+    }
+    if (self.beaconReportingHandle != nil) {
+        [self.beaconReportingHandle stop];
+    }
+    if (self.beaconProximityHandle != nil) {
+        [self.beaconProximityHandle stop];
+    }
+    if (self.analyticsHandle != nil) {
+        [self.analyticsHandle stop];
+    }
 }
 
 - (IBAction)stubModeSwitch:(id)sender {
@@ -85,6 +113,8 @@
 }
 
 - (IBAction)Start:(id)sender {
+    [self enableStopButton];
+    
     if (self.locationHandle != nil) {
         [self.locationHandle start];
     }
@@ -103,21 +133,9 @@
 }
 
 - (IBAction)stop:(id)sender {
-    if (self.locationHandle != nil) {
-        [self stopLoc];
-    }
-    if (self.geofencingHandle != nil) {
-        [self.geofencingHandle stop];
-    }
-    if (self.beaconReportingHandle != nil) {
-        [self.beaconReportingHandle stop];
-    }
-    if (self.beaconProximityHandle != nil) {
-        [self.beaconProximityHandle stop];
-    }
-    if (self.analyticsHandle != nil) {
-        [self.analyticsHandle stop];
-    }
+    [self enableStartButton];
+    
+    [self stop];
 }
 
 - (IBAction)SynchronyzeButtonClicked:(id)sender {
@@ -152,8 +170,8 @@
 }
 
 - (void)waitForSynchro {
-    [self.startButton setEnabled:NO];
-    [self.stopButton setEnabled:NO];
+    [self.startButton setEnabled:startButtonState];
+    [self.stopButton setEnabled:stopButtonState];
     [self.synchronyzeButton setEnabled:NO];
     
     spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -164,8 +182,8 @@
 }
 
 - (void)dismissAfterSynchro {
-    [self.startButton setEnabled:YES];
-    [self.stopButton setEnabled:YES];
+    [self.startButton setEnabled:startButtonState];
+    [self.stopButton setEnabled:stopButtonState];
     [self.synchronyzeButton setEnabled:YES];
     
     [spinner stopAnimating];
@@ -207,6 +225,20 @@
     if (self.analyticsHandle != nil) {
         [self.analyticsHandle setPowerMode:DBTPOWERMODE_HIGH];
     }
+}
+
+- (void)enableStartButton {
+    startButtonState = YES;
+    stopButtonState = NO;
+    [self.startButton setEnabled:startButtonState];
+    [self.stopButton setEnabled:stopButtonState];
+}
+
+- (void)enableStopButton {
+    startButtonState = NO;
+    stopButtonState = YES;
+    [self.startButton setEnabled:startButtonState];
+    [self.stopButton setEnabled:stopButtonState];
 }
 
 #pragma mark - NAOBeaconProximityHandleDelegate

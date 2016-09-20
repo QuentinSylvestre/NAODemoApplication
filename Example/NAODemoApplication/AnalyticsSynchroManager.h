@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <NAOSDK/NAOSDK.h>
+#import "NAOSyncDelegate.h"
 #import "AnalyticsSynchroManagerDelegate.h"
 
 @interface AnalyticsSynchroManager : NSObject <NAOSyncDelegate>

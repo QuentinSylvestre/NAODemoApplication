@@ -11,6 +11,8 @@
 @implementation GeofencingViewController {
     NSString *apiKey;
     UIActivityIndicatorView *spinner;
+    BOOL startButtonState;
+    BOOL stopButtonState;
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -18,7 +20,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
-
+    
     if (self.geofencingHandle == nil) {
         self.geofencingHandle = [[NAOGeofencingHandle alloc] initWithKey:apiKey delegate:self sensorsDelegate:self];
     }
@@ -28,23 +30,38 @@
     [self.versionLabel setText:[NSString stringWithFormat:@"Version : %@", [NAOServicesConfig getSoftwareVersion]]];
     
     self.notificationManager = [[NotificationManager alloc] init];
+    
+    stopButtonState = NO;
+    startButtonState = YES;
+    [self.stopButton setEnabled:stopButtonState];
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
     
+    if (self.isMovingFromParentViewController || self.isBeingDismissed) {
+        [self stop];
+    }
+}
+
+- (void)stop {
+    if (self.geofencingHandle != nil) {
+        [self.geofencingHandle stop];
+    }
 }
 
 #pragma mark - View Events
 - (IBAction)startGeofencingServiceButtonClicked:(id)sender {
-    [self.geofencingHandle start];
+    [self enableStopButton];
     
+    [self.geofencingHandle start];
 }
 
 
 - (IBAction)StopGeofencingServiceButtonClicked:(id)sender {
-    if (self.geofencingHandle != nil) {
-        [self.geofencingHandle stop];
-    }
+    [self enableStartButton];
+    
+    [self stop];
 }
 
 - (IBAction)stubModeSwitch:(id)sender {
@@ -79,8 +96,8 @@
 }
 
 - (void)dismissAfterSynchro {
-    [self.startButton setEnabled:YES];
-    [self.stopButton setEnabled:YES];
+    [self.startButton setEnabled:startButtonState];
+    [self.stopButton setEnabled:stopButtonState];
     [self.synchronyzeButton setEnabled:YES];
     
     [spinner stopAnimating];
@@ -105,6 +122,20 @@
     }
 }
 
+- (void)enableStartButton {
+    startButtonState = YES;
+    stopButtonState = NO;
+    [self.startButton setEnabled:startButtonState];
+    [self.stopButton setEnabled:stopButtonState];
+}
+
+- (void)enableStopButton {
+    startButtonState = NO;
+    stopButtonState = YES;
+    [self.startButton setEnabled:startButtonState];
+    [self.stopButton setEnabled:stopButtonState];
+}
+
 #pragma mark - NAOGeofencingHandleDelegate
 
 - (void) didFireNAOAlert:(NaoAlert *)alert {
@@ -115,6 +146,8 @@
 }
 
 - (void) didFailWithErrorCode:(DBNAOERRORCODE)errCode andMessage:(NSString *)message {
+    [self enableStartButton];
+    
     NSString *errorText = [NSString stringWithFormat:@"errorCode:%ld  message:%@", (long)errCode, message];
     [self.notificationManager displayNotificationWithMessage:[NSString stringWithFormat:@"%@ : %@", NSStringFromSelector(_cmd), errorText]];
     
