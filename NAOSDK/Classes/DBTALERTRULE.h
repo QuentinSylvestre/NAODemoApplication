@@ -3,6 +3,7 @@
 
 #import <Foundation/Foundation.h>
 
+/** Geofencing alert rule types */
 typedef NS_ENUM(NSInteger, DBTALERTRULE)
 {
     /** getting near a beacon */

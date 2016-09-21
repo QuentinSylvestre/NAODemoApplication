@@ -3,6 +3,7 @@
 
 #import <Foundation/Foundation.h>
 
+/** Beacon proximity service status types */
 typedef NS_ENUM(NSInteger, DBTBEACONSTATE)
 {
     DBTBEACONSTATE_NO_CHANGE,

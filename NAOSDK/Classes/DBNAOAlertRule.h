@@ -4,6 +4,7 @@
 #import "DBTALERTRULE.h"
 #import <Foundation/Foundation.h>
 
+/** Geofencing alert rule */
 @interface DBNAOAlertRule : NSObject
 - (nonnull instancetype)initWithId:(int32_t)id
                               type:(DBTALERTRULE)type

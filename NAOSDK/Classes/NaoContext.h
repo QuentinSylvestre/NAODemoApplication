@@ -32,6 +32,6 @@
 - (void)writeToLog:(NSString *)txt;
 - (void)uploadNAOLogInfo;
 
-- (NSArray *)regionsOfAllActiveAlerts;
+- (NSArray *)regionsOfAllActiveAlerts:(NSString *)apiKey;
 
 @end

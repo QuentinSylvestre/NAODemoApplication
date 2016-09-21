@@ -3,6 +3,7 @@
 
 #import <Foundation/Foundation.h>
 
+/** NAO Location service status */
 typedef NS_ENUM(NSInteger, DBTNAOFIXSTATUS)
 {
     /** A critical error has occurred: location is not available; details about the error are returned by onError callback. */

@@ -27,6 +27,7 @@
 #import "NaoContext.h"
 #import "NAOGeofencingHandle.h"
 #import "NAOGeofencingHandleDelegate.h"
+#import "NAOGeofenceHandleDelegate.h"
 #import "NAOLocationHandle.h"
 #import "NAOLocationHandleDelegate.h"
 #import "NAOSensorsDelegate.h"
