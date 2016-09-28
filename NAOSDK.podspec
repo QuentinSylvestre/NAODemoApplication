@@ -39,8 +39,8 @@ The following services are available in NAOSDK:
   s.frameworks  = "CoreBluetooth", "CoreLocation", "CoreMotion", "SystemConfiguration"
   s.requires_arc = true
 
-  s.source_files = 'NAOSDK/Classes/**/*.h'
-  s.vendored_libraries = 'NAOSDK/Classes/libNAOSDK.a'
+  s.source_files = 'Pod/Classes/**/*.h'
+  s.vendored_libraries = 'Pod/Classes/libNAOSDK.a'
   # s.public_header_files = 'Pod/Classes/**/*.h'
 
   # s.resource_bundles = {
