@@ -1,1 +1,1 @@
-../../../../../NAOSDK/Classes/NAOBeaconProximityHandle.h
+../../../../../Pod/Classes/NAOBeaconProximityHandle.h

@@ -1,1 +1,1 @@
-../../../../../NAOSDK/Classes/DBTPOWERMODE.h
+../../../../../Pod/Classes/DBTPOWERMODE.h

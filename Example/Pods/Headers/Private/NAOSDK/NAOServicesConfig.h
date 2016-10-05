@@ -1,1 +1,1 @@
-../../../../../NAOSDK/Classes/NAOServicesConfig.h
+../../../../../Pod/Classes/NAOServicesConfig.h

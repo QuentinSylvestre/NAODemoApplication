@@ -1,1 +1,1 @@
-../../../../../NAOSDK/Classes/NAOBeaconReportingHandle.h
+../../../../../Pod/Classes/NAOBeaconReportingHandle.h

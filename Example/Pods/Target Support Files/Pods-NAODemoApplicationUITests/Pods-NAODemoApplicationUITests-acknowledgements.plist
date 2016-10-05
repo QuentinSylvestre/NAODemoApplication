@@ -50,6 +50,8 @@ e.	Data Privacy. Company agrees that Pole Star may periodically collect, process
 f.	The parties hereto expressly understand and agree that the parties are independent contractors in the performance of each and every part of this Agreement, are each solely responsible for its respective employees and agents as well as related labor costs and expenses.
 g.	Notices. Notices to either party must be in writing and must be delivered in person, by first-class certified mail, postage prepaid, return receipt requested, or by a express courier service addressed as stated at the beginning of this Agreement.
 </string>
+			<key>License</key>
+			<string>POLESTAR</string>
 			<key>Title</key>
 			<string>NAOSDK</string>
 			<key>Type</key>

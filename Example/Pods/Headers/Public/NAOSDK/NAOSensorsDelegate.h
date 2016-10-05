@@ -1,1 +1,1 @@
-../../../../../NAOSDK/Classes/NAOSensorsDelegate.h
+../../../../../Pod/Classes/NAOSensorsDelegate.h

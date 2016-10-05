@@ -1,1 +1,1 @@
-../../../../../NAOSDK/Classes/DBNAOAlertRule.h
+../../../../../Pod/Classes/DBNAOAlertRule.h

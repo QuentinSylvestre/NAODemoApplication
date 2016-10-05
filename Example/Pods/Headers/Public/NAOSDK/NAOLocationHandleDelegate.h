@@ -1,1 +1,1 @@
-../../../../../NAOSDK/Classes/NAOLocationHandleDelegate.h
+../../../../../Pod/Classes/NAOLocationHandleDelegate.h

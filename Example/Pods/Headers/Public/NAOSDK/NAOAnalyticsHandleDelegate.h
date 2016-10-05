@@ -1,1 +1,1 @@
-../../../../../NAOSDK/Classes/NAOAnalyticsHandleDelegate.h
+../../../../../Pod/Classes/NAOAnalyticsHandleDelegate.h

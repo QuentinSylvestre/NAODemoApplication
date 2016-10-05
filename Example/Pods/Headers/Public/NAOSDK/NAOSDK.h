@@ -1,1 +1,1 @@
-../../../../../NAOSDK/Classes/NAOSDK.h
+../../../../../Pod/Classes/NAOSDK.h

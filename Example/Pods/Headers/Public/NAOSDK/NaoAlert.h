@@ -1,1 +1,1 @@
-../../../../../NAOSDK/Classes/NaoAlert.h
+../../../../../Pod/Classes/NaoAlert.h

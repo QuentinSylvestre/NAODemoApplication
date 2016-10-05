@@ -1,1 +1,1 @@
-../../../../../NAOSDK/Classes/DBTBEACONSTATE.h
+../../../../../Pod/Classes/DBTBEACONSTATE.h
