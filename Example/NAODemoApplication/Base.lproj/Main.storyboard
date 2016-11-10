@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="D6h-I9-Tpu">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11535.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="D6h-I9-Tpu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11523"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Api Key Selection View Controller-->
@@ -15,44 +19,44 @@
                         <viewControllerLayoutGuide type="bottom" id="5IC-Uu-SzC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Utn-eX-HPr">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ApiKey Selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgF-kn-akx">
-                                <rect key="frame" x="20" y="74" width="125" height="21"/>
+                                <rect key="frame" x="16" y="74" width="125" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThC-PX-jjq">
-                                <rect key="frame" x="310" y="550" width="270" height="30"/>
+                                <rect key="frame" x="197.5" y="617" width="161.5" height="30"/>
                                 <state key="normal" title="Validate"/>
                                 <connections>
                                     <action selector="validateAction:" destination="yyL-Y2-aJr" eventType="touchUpInside" id="cxZ-ao-Wdi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uH-8J-TDb">
-                                <rect key="frame" x="20" y="550" width="270" height="30"/>
+                                <rect key="frame" x="16" y="617" width="161.5" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancelAction:" destination="yyL-Y2-aJr" eventType="touchUpInside" id="AgZ-ch-Iuc"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E2E-YR-H41">
-                                <rect key="frame" x="20" y="141" width="560" height="401"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="16" y="141" width="343" height="468"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="apiKeyCell" id="lMn-U5-aof">
-                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lMn-U5-aof" id="LeR-mS-YuP">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5s-z6-0aS">
                                                     <rect key="frame" x="8" y="14" width="33" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -65,12 +69,12 @@
                                 </prototypes>
                             </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I8H-JR-LVZ">
-                                <rect key="frame" x="20" y="103" width="560" height="30"/>
+                                <rect key="frame" x="16" y="103" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8uH-8J-TDb" firstAttribute="width" secondItem="ThC-PX-jjq" secondAttribute="width" id="0S5-Op-qbn"/>
                             <constraint firstItem="ThC-PX-jjq" firstAttribute="leading" secondItem="8uH-8J-TDb" secondAttribute="trailing" constant="20" id="90t-VU-zAx"/>
@@ -103,15 +107,15 @@
             <objects>
                 <tableViewController id="RfD-Zr-zAA" customClass="ApplicationsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qAc-VW-fhZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="oe8-56-dgO">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oe8-56-dgO" id="n5e-Yu-nOp">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -124,7 +128,7 @@
                     <navigationItem key="navigationItem" title="Root View Controller" id="Bl8-FI-C51">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="4mB-fC-ijx">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EtL-y1-LpT">
-                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <rect key="frame" x="226" y="7" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Change API Key"/>
                                 <connections>
@@ -139,7 +143,7 @@
                         <segue destination="fUI-sh-Rue" kind="show" identifier="BeaconProximitySegue" id="BMV-a4-Vpq"/>
                         <segue destination="OVI-kW-PpC" kind="show" identifier="AnalyticsSegue" id="WTJ-gr-64X"/>
                         <segue destination="Ix9-T8-5jO" kind="show" identifier="BeaconReportingSegue" id="FFM-hr-UKo"/>
-                        <segue destination="DES-hB-9sS" kind="show" identifier="SmartParkMainSegue" id="tve-33-krX"/>
+                        <segue destination="DES-hB-9sS" kind="show" identifier="WakeServiceMainSegue" id="tve-33-krX"/>
                         <segue destination="yyL-Y2-aJr" kind="show" identifier="apiKeySelectionSegue" id="0d9-ea-hT7"/>
                         <segue destination="1Xb-0W-QfH" kind="show" identifier="AllServicesSegue" id="jK9-op-vTV"/>
                     </connections>
@@ -157,68 +161,68 @@
                         <viewControllerLayoutGuide type="bottom" id="U2d-Ny-sah"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GED-h6-rLp">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZO3-l6-3oW">
-                                <rect key="frame" x="228" y="332" width="145" height="30"/>
+                                <rect key="frame" x="115" y="399" width="145" height="30"/>
                                 <state key="normal" title="Start Indoor Location"/>
                                 <connections>
                                     <action selector="Start:" destination="xIL-iB-hUz" eventType="touchUpInside" id="WDG-WZ-2xU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaX-dd-kMM">
-                                <rect key="frame" x="229" y="377" width="143" height="30"/>
+                                <rect key="frame" x="116" y="444" width="143" height="30"/>
                                 <state key="normal" title="Stop Indoor Location"/>
                                 <connections>
                                     <action selector="stop:" destination="xIL-iB-hUz" eventType="touchUpInside" id="ZW3-Py-F07"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RL-84-QA8">
-                                <rect key="frame" x="247" y="518" width="106" height="21"/>
+                                <rect key="frame" x="134.5" y="585" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location: longitude, latitude, altitude, heading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJ9-me-LIe">
-                                <rect key="frame" x="20" y="467" width="560" height="21"/>
+                                <rect key="frame" x="16" y="534" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0sa-cP-SmX">
-                                <rect key="frame" x="531" y="72" width="51" height="31"/>
+                                <rect key="frame" x="310" y="72" width="51" height="31"/>
                                 <connections>
                                     <action selector="stubModeSwitch:" destination="xIL-iB-hUz" eventType="valueChanged" id="2pi-Gc-K49"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stub Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3i-9z-SiS">
-                                <rect key="frame" x="439" y="77" width="84" height="21"/>
+                                <rect key="frame" x="218" y="77" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ErrorLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPh-18-suZ">
-                                <rect key="frame" x="20" y="569" width="560" height="21"/>
+                                <rect key="frame" x="16" y="636" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.084040851152848539" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.084040851152848539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9j-Mg-Ch7">
-                                <rect key="frame" x="258" y="422" width="85" height="30"/>
+                                <rect key="frame" x="145" y="489" width="85" height="30"/>
                                 <state key="normal" title="Synchronize"/>
                                 <connections>
                                     <action selector="SynchronyzeButtonClicked:" destination="xIL-iB-hUz" eventType="touchUpInside" id="1i4-O1-FmI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VersionLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IA-V8-yVM">
-                                <rect key="frame" x="20" y="66" width="51" height="10"/>
+                                <rect key="frame" x="16" y="66" width="51" height="10"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="2IA-V8-yVM" secondAttribute="leading" id="7gY-qq-UUS"/>
                             <constraint firstAttribute="leadingMargin" secondItem="mPh-18-suZ" secondAttribute="leading" id="7zN-8E-P7F"/>
@@ -267,62 +271,62 @@
                         <viewControllerLayoutGuide type="bottom" id="Xhy-Go-XOC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GNG-Hl-pal">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bl8-uC-gQT">
-                                <rect key="frame" x="215" y="428" width="170" height="30"/>
+                                <rect key="frame" x="102.5" y="495" width="170" height="30"/>
                                 <state key="normal" title="Stop Geofencing Service"/>
                                 <connections>
                                     <action selector="StopGeofencingServiceButtonClicked:" destination="rAU-Ei-D3U" eventType="touchUpInside" id="DQX-rb-Gar"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pW-6m-xta">
-                                <rect key="frame" x="214" y="383" width="172" height="30"/>
+                                <rect key="frame" x="101.5" y="450" width="172" height="30"/>
                                 <state key="normal" title="Start Geofencing Service"/>
                                 <connections>
                                     <action selector="startGeofencingServiceButtonClicked:" destination="rAU-Ei-D3U" eventType="touchUpInside" id="Ady-z1-kiO"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BTH-T0-gOM">
-                                <rect key="frame" x="531" y="72" width="51" height="31"/>
+                                <rect key="frame" x="310" y="72" width="51" height="31"/>
                                 <connections>
                                     <action selector="stubModeSwitch:" destination="rAU-Ei-D3U" eventType="valueChanged" id="Tbs-SQ-iOm"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stub Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmu-NF-N2V">
-                                <rect key="frame" x="444" y="77" width="84" height="21"/>
+                                <rect key="frame" x="223" y="77" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ErrorLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fn-Qc-lGV">
-                                <rect key="frame" x="20" y="569" width="560" height="21"/>
+                                <rect key="frame" x="16" y="636" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.084040851149999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.084040851149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last alert : None" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZQ-86-OoS">
-                                <rect key="frame" x="20" y="518" width="560" height="21"/>
+                                <rect key="frame" x="16" y="585" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3m-of-C03">
-                                <rect key="frame" x="256" y="473" width="89" height="30"/>
+                                <rect key="frame" x="143" y="540" width="89" height="30"/>
                                 <state key="normal" title="Synchronyze"/>
                                 <connections>
                                     <action selector="synchronyzeButtonClicked:" destination="rAU-Ei-D3U" eventType="touchUpInside" id="1cH-WT-Mze"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VersionLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKz-4t-wxu">
-                                <rect key="frame" x="20" y="66" width="51" height="10"/>
+                                <rect key="frame" x="16" y="66" width="51" height="10"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KZQ-86-OoS" firstAttribute="top" secondItem="Z3m-of-C03" secondAttribute="bottom" constant="15" id="0co-C9-nSe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KZQ-86-OoS" secondAttribute="trailing" id="2mM-sO-ihY"/>
@@ -368,31 +372,31 @@
                         <viewControllerLayoutGuide type="bottom" id="usX-jg-J0v"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="n09-t1-hxR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxj-zY-h4i">
-                                <rect key="frame" x="196" y="434" width="208" height="30"/>
+                                <rect key="frame" x="83.5" y="501" width="208" height="30"/>
                                 <state key="normal" title="Start BeaconProximity Service"/>
                                 <connections>
                                     <action selector="StartBeaconProximityServiceButtonClicked:" destination="fUI-sh-Rue" eventType="touchUpInside" id="fpD-Ym-t2U"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMX-Pr-SQc">
-                                <rect key="frame" x="197" y="479" width="206" height="30"/>
+                                <rect key="frame" x="84.5" y="546" width="206" height="30"/>
                                 <state key="normal" title="Stop BeaconProximity Service"/>
                                 <connections>
                                     <action selector="StopBeaconProximityServiceButtonClicked:" destination="fUI-sh-Rue" eventType="touchUpInside" id="sdq-jb-lBa"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ErrorLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7X-2O-Dqs">
-                                <rect key="frame" x="20" y="569" width="560" height="21"/>
+                                <rect key="frame" x="16" y="636" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.084040851149999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.084040851149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgw-88-tNs">
-                                <rect key="frame" x="256" y="524" width="89" height="30"/>
+                                <rect key="frame" x="143" y="591" width="89" height="30"/>
                                 <state key="normal" title="Synchronyze"/>
                                 <connections>
                                     <action selector="synchronyzeButtonClicked:" destination="rAU-Ei-D3U" eventType="touchUpInside" id="ChK-g4-a2M"/>
@@ -400,13 +404,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VersionLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfb-2i-Cuc">
-                                <rect key="frame" x="20" y="66" width="51" height="10"/>
+                                <rect key="frame" x="16" y="66" width="51" height="10"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="Tfb-2i-Cuc" secondAttribute="leading" id="CeC-eX-6eK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="G7X-2O-Dqs" secondAttribute="trailing" id="O2A-XL-hfm"/>
@@ -443,31 +447,31 @@
                         <viewControllerLayoutGuide type="bottom" id="wsr-sb-UNY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0NI-Xi-DNv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXd-TL-mrQ">
-                                <rect key="frame" x="222" y="434" width="156" height="30"/>
+                                <rect key="frame" x="109.5" y="501" width="156" height="30"/>
                                 <state key="normal" title="Start Analytics Service"/>
                                 <connections>
                                     <action selector="StartAnalyticsServiceButtonClicked:" destination="OVI-kW-PpC" eventType="touchUpInside" id="MbZ-iV-4dW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCb-H5-4iK">
-                                <rect key="frame" x="223" y="479" width="154" height="30"/>
+                                <rect key="frame" x="110.5" y="546" width="154" height="30"/>
                                 <state key="normal" title="Stop Analytics Service"/>
                                 <connections>
                                     <action selector="StopAnalyticsServiceButtonClicked:" destination="OVI-kW-PpC" eventType="touchUpInside" id="DMD-EK-7Tv"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ErrorLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOP-Fd-5Bo">
-                                <rect key="frame" x="20" y="569" width="560" height="21"/>
+                                <rect key="frame" x="16" y="636" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.084040851149999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.084040851149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOK-qd-Ygo">
-                                <rect key="frame" x="256" y="524" width="89" height="30"/>
+                                <rect key="frame" x="143" y="591" width="89" height="30"/>
                                 <state key="normal" title="Synchronyze"/>
                                 <connections>
                                     <action selector="synchronyzeButtonClicked:" destination="rAU-Ei-D3U" eventType="touchUpInside" id="SmN-Om-GQe"/>
@@ -476,13 +480,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VersionLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sfc-7f-TGI">
-                                <rect key="frame" x="20" y="66" width="51" height="10"/>
+                                <rect key="frame" x="16" y="66" width="51" height="10"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="sOP-Fd-5Bo" firstAttribute="centerX" secondItem="0NI-Xi-DNv" secondAttribute="centerX" id="0ts-jn-YmT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sOP-Fd-5Bo" secondAttribute="trailing" id="1DW-Q5-vEy"/>
@@ -510,103 +514,87 @@
             </objects>
             <point key="canvasLocation" x="570" y="1839"/>
         </scene>
-        <!--Smart Park Main View Controller-->
+        <!--Wake Service View Controller-->
         <scene sceneID="9f5-ZG-efp">
             <objects>
-                <viewController id="DES-hB-9sS" customClass="SmartParkMainViewController" sceneMemberID="viewController">
+                <viewController id="DES-hB-9sS" customClass="WakeServiceViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="21j-ce-rbw"/>
                         <viewControllerLayoutGuide type="bottom" id="QzX-pr-CeG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="k8Q-d1-cYi">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VersionLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuX-CF-1G5">
-                                <rect key="frame" x="20" y="66" width="51" height="10"/>
+                                <rect key="frame" x="16" y="66" width="51" height="10"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jJ-Zg-lIW">
-                                <rect key="frame" x="258" y="285" width="84" height="30"/>
-                                <state key="normal" title="Display Map"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohF-oP-4V0">
+                                <rect key="frame" x="168.5" y="626" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0099468241871529806" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jE-CD-ze1">
+                                <rect key="frame" x="145" y="588" width="85" height="30"/>
+                                <state key="normal" title="Synchronize"/>
                                 <connections>
-                                    <segue destination="wVo-WE-WV1" kind="show" id="AZZ-Vc-yyI"/>
+                                    <action selector="synchronizeTouch:" destination="DES-hB-9sS" eventType="touchUpInside" id="bSR-3d-Fgl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Synchronization state" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63f-3C-lM9">
-                                <rect key="frame" x="217" y="559" width="166" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvW-Rl-NXu">
+                                <rect key="frame" x="144" y="550" width="86" height="30"/>
+                                <state key="normal" title="Stop service"/>
+                                <connections>
+                                    <action selector="stopServiceTouch:" destination="DES-hB-9sS" eventType="touchUpInside" id="wnA-W2-s0J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9O-fd-rfk">
+                                <rect key="frame" x="144" y="512" width="87" height="30"/>
+                                <state key="normal" title="Start service"/>
+                                <connections>
+                                    <action selector="startServiceTouch:" destination="DES-hB-9sS" eventType="touchUpInside" id="jzi-qf-sV0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLZ-Lk-ygt">
+                                <rect key="frame" x="128" y="474" width="118" height="30"/>
+                                <state key="normal" title="Enable wake lock"/>
+                                <connections>
+                                    <action selector="wakeLockTouch:" destination="DES-hB-9sS" eventType="touchUpInside" id="WZs-20-buh"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ohF-oP-4V0" firstAttribute="centerX" secondItem="k8Q-d1-cYi" secondAttribute="centerX" id="0qf-hU-grP"/>
                             <constraint firstAttribute="leadingMargin" secondItem="wuX-CF-1G5" secondAttribute="leading" id="C86-jb-VGK"/>
+                            <constraint firstItem="7jE-CD-ze1" firstAttribute="top" secondItem="RvW-Rl-NXu" secondAttribute="bottom" constant="8" id="HFh-39-LuY"/>
                             <constraint firstItem="wuX-CF-1G5" firstAttribute="top" secondItem="21j-ce-rbw" secondAttribute="bottom" constant="2" id="K8Q-qt-nYP"/>
-                            <constraint firstItem="7jJ-Zg-lIW" firstAttribute="centerY" secondItem="k8Q-d1-cYi" secondAttribute="centerY" id="OTA-tX-kcG"/>
-                            <constraint firstItem="63f-3C-lM9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="k8Q-d1-cYi" secondAttribute="leadingMargin" constant="20" id="Odc-kU-aeL"/>
-                            <constraint firstItem="63f-3C-lM9" firstAttribute="centerX" secondItem="k8Q-d1-cYi" secondAttribute="centerX" id="Qu2-L7-wOa"/>
-                            <constraint firstItem="7jJ-Zg-lIW" firstAttribute="centerX" secondItem="k8Q-d1-cYi" secondAttribute="centerX" id="s0F-P4-bIl"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="63f-3C-lM9" secondAttribute="trailing" constant="20" id="w3J-rd-bZg"/>
-                            <constraint firstItem="QzX-pr-CeG" firstAttribute="top" secondItem="63f-3C-lM9" secondAttribute="bottom" constant="20" id="wFM-QH-Opg"/>
+                            <constraint firstItem="ohF-oP-4V0" firstAttribute="top" secondItem="7jE-CD-ze1" secondAttribute="bottom" constant="8" id="P8M-Wy-wW7"/>
+                            <constraint firstItem="RvW-Rl-NXu" firstAttribute="top" secondItem="n9O-fd-rfk" secondAttribute="bottom" constant="8" id="Qxx-ie-wYj"/>
+                            <constraint firstItem="7jE-CD-ze1" firstAttribute="centerX" secondItem="k8Q-d1-cYi" secondAttribute="centerX" id="UFB-PO-8qb"/>
+                            <constraint firstItem="RvW-Rl-NXu" firstAttribute="centerX" secondItem="k8Q-d1-cYi" secondAttribute="centerX" id="bwh-Vs-KuL"/>
+                            <constraint firstItem="n9O-fd-rfk" firstAttribute="centerX" secondItem="k8Q-d1-cYi" secondAttribute="centerX" id="fps-ve-zLP"/>
+                            <constraint firstItem="n9O-fd-rfk" firstAttribute="top" secondItem="VLZ-Lk-ygt" secondAttribute="bottom" constant="8" id="m4l-u7-DNY"/>
+                            <constraint firstItem="VLZ-Lk-ygt" firstAttribute="centerX" secondItem="k8Q-d1-cYi" secondAttribute="centerX" id="nEJ-Rh-tzM"/>
+                            <constraint firstItem="QzX-pr-CeG" firstAttribute="top" secondItem="ohF-oP-4V0" secondAttribute="bottom" constant="20" id="wK8-Ck-iih"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="synchronizationLabel" destination="63f-3C-lM9" id="nVF-kV-c7m"/>
+                        <outlet property="errorLabel" destination="ohF-oP-4V0" id="7Cx-n2-bg4"/>
+                        <outlet property="startServiceButton" destination="n9O-fd-rfk" id="FAZ-T8-fNh"/>
+                        <outlet property="stopServiceButton" destination="RvW-Rl-NXu" id="D0N-2x-1U4"/>
+                        <outlet property="synchronyzeButton" destination="7jE-CD-ze1" id="D2z-hi-kXS"/>
                         <outlet property="versionLabel" destination="wuX-CF-1G5" id="Qhi-er-1SZ"/>
-                        <segue destination="wVo-WE-WV1" kind="show" identifier="SmartParkSegue" id="B7T-9Q-CXw"/>
+                        <outlet property="wakeLockButton" destination="VLZ-Lk-ygt" id="dJd-jn-GSv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lU8-UM-wrw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="570" y="-922"/>
-        </scene>
-        <!--Map View Controller-->
-        <scene sceneID="YJD-tK-KaT">
-            <objects>
-                <viewController storyboardIdentifier="MapViewController" id="wVo-WE-WV1" customClass="MapViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OI0-Jx-QLe"/>
-                        <viewControllerLayoutGuide type="bottom" id="7FI-wz-4aK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="k3b-IS-9Ip">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VersionLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5F-or-7Ks">
-                                <rect key="frame" x="20" y="66" width="51" height="10"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Map" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r87-rq-fW9">
-                                <rect key="frame" x="264" y="289" width="73" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="r87-rq-fW9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="k3b-IS-9Ip" secondAttribute="leadingMargin" constant="10" id="6Hx-oo-tMH"/>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="r87-rq-fW9" secondAttribute="trailing" constant="10" id="BZp-M9-9Oq"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="J5F-or-7Ks" secondAttribute="leading" id="Hfb-tD-FJ4"/>
-                            <constraint firstItem="r87-rq-fW9" firstAttribute="centerX" secondItem="k3b-IS-9Ip" secondAttribute="centerX" id="Ike-jA-IQ5"/>
-                            <constraint firstItem="r87-rq-fW9" firstAttribute="centerY" secondItem="k3b-IS-9Ip" secondAttribute="centerY" id="NFV-gB-Zyt"/>
-                            <constraint firstItem="J5F-or-7Ks" firstAttribute="top" secondItem="OI0-Jx-QLe" secondAttribute="bottom" constant="2" id="qNb-fp-uSZ"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="mapLabel" destination="r87-rq-fW9" id="anI-dw-i3N"/>
-                        <outlet property="versionLabel" destination="J5F-or-7Ks" id="QTH-rp-ghR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kNJ-01-IyN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1244" y="-922"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Mu-9Q-oWn">
@@ -633,31 +621,31 @@
                         <viewControllerLayoutGuide type="bottom" id="snc-cO-faX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aGZ-BT-8Id">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tv8-2l-GOQ">
-                                <rect key="frame" x="194" y="434" width="212" height="30"/>
+                                <rect key="frame" x="81.5" y="501" width="212" height="30"/>
                                 <state key="normal" title="Start BeaconReporting Service"/>
                                 <connections>
                                     <action selector="StartBeaconReportingButtonClicked:" destination="Ix9-T8-5jO" eventType="touchUpInside" id="GfU-eX-ofS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRW-FW-Drx">
-                                <rect key="frame" x="195" y="479" width="210" height="30"/>
+                                <rect key="frame" x="82.5" y="546" width="210" height="30"/>
                                 <state key="normal" title="Stop BeaconReporting Service"/>
                                 <connections>
                                     <action selector="StopBeaconReportingButtonClicked:" destination="Ix9-T8-5jO" eventType="touchUpInside" id="kYv-Nt-HZz"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ErrorLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DW0-JO-7vw">
-                                <rect key="frame" x="20" y="569" width="560" height="21"/>
+                                <rect key="frame" x="16" y="636" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.084040851149999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.084040851149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6c-9L-bgq">
-                                <rect key="frame" x="256" y="524" width="89" height="30"/>
+                                <rect key="frame" x="143" y="591" width="89" height="30"/>
                                 <state key="normal" title="Synchronyze"/>
                                 <connections>
                                     <action selector="synchronyzeButtonClicked:" destination="Ix9-T8-5jO" eventType="touchUpInside" id="Mov-Mt-aVS"/>
@@ -666,13 +654,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VersionLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNP-qP-OHq">
-                                <rect key="frame" x="20" y="66" width="51" height="10"/>
+                                <rect key="frame" x="16" y="66" width="51" height="10"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Tv8-2l-GOQ" firstAttribute="centerX" secondItem="aGZ-BT-8Id" secondAttribute="centerX" id="08I-91-ysK"/>
                             <constraint firstItem="M6c-9L-bgq" firstAttribute="top" secondItem="eRW-FW-Drx" secondAttribute="bottom" constant="15" id="6um-Tj-1lM"/>
@@ -709,68 +697,68 @@
                         <viewControllerLayoutGuide type="bottom" id="PAa-6M-cD5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HES-Ds-9d5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88o-3P-Lg0">
-                                <rect key="frame" x="252" y="332" width="97" height="30"/>
+                                <rect key="frame" x="139" y="399" width="97" height="30"/>
                                 <state key="normal" title="Start Services"/>
                                 <connections>
                                     <action selector="Start:" destination="1Xb-0W-QfH" eventType="touchUpInside" id="n7S-tG-kzP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6K-ZU-zJY">
-                                <rect key="frame" x="253" y="377" width="95" height="30"/>
+                                <rect key="frame" x="140" y="444" width="95" height="30"/>
                                 <state key="normal" title="Stop Services"/>
                                 <connections>
                                     <action selector="stop:" destination="1Xb-0W-QfH" eventType="touchUpInside" id="fNy-1a-d8d"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZG-Zu-TjT">
-                                <rect key="frame" x="247" y="518" width="106" height="21"/>
+                                <rect key="frame" x="134.5" y="585" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location: longitude, latitude, altitude, heading" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwv-dv-Mlf">
-                                <rect key="frame" x="20" y="467" width="560" height="21"/>
+                                <rect key="frame" x="16" y="534" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bn5-20-4E2">
-                                <rect key="frame" x="531" y="72" width="51" height="31"/>
+                                <rect key="frame" x="310" y="72" width="51" height="31"/>
                                 <connections>
                                     <action selector="stubModeSwitch:" destination="1Xb-0W-QfH" eventType="valueChanged" id="rdu-f6-Nac"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stub Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e12-N5-K2q">
-                                <rect key="frame" x="439" y="77" width="84" height="21"/>
+                                <rect key="frame" x="218" y="77" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ErrorLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAP-1D-P5a">
-                                <rect key="frame" x="20" y="569" width="560" height="21"/>
+                                <rect key="frame" x="16" y="636" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.084040851149999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.084040851149999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfb-Da-fhX">
-                                <rect key="frame" x="258" y="422" width="85" height="30"/>
+                                <rect key="frame" x="145" y="489" width="85" height="30"/>
                                 <state key="normal" title="Synchronize"/>
                                 <connections>
                                     <action selector="SynchronyzeButtonClicked:" destination="1Xb-0W-QfH" eventType="touchUpInside" id="ZIi-St-ASg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VersionLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVl-5C-bSM">
-                                <rect key="frame" x="20" y="66" width="51" height="10"/>
+                                <rect key="frame" x="16" y="66" width="51" height="10"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="kAP-1D-P5a" secondAttribute="leading" id="6g6-Fa-DrP"/>
                             <constraint firstAttribute="leadingMargin" secondItem="CVl-5C-bSM" secondAttribute="leading" id="8tO-j9-0aE"/>
@@ -811,7 +799,4 @@
             <point key="canvasLocation" x="572" y="-1577"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="B7T-9Q-CXw"/>
-    </inferredMetricsTieBreakers>
 </document>

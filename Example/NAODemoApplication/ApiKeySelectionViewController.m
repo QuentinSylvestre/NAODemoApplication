@@ -22,7 +22,9 @@
     [self.apiKeySelectionTableView setDelegate:self];
     [self.apiKeySelectionTableView setDataSource:self];
     
-    self.apiKeyList = [[NSArray alloc] init];
+    self.apiKeyList = [[NSMutableArray alloc] init];
+    self.apiKeyNames = [[NSMutableArray alloc] init];
+    NSArray *allRow = [[NSArray alloc] init];
     
     NSString* filePath = [[NSBundle mainBundle] pathForResource:@"apiKeyFile" ofType:@"txt"];
     NSError *error;
@@ -31,8 +33,19 @@
     if (stringFromFileAtURL == nil) {
         NSLog(@"Error reading file at %@\n%@", filePath, [error localizedFailureReason]);
     } else {
-        self.apiKeyList = [stringFromFileAtURL componentsSeparatedByString:@"\n"];
+        allRow = [stringFromFileAtURL componentsSeparatedByString:@"\n"];
+        
+        // In the apiKeyFile there must be 1 row for apiKeyName and 1 row for apiKey
+        for (int i=0; i < [allRow count]; i++) {
+            if ((i % 2) == 0) {
+                [self.apiKeyNames addObject:[allRow objectAtIndex:i]];
+            } else {
+                [self.apiKeyList addObject:[allRow objectAtIndex:i]];
+            }
+        }
     }
+    
+    
     
     NSString *apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
     
@@ -85,7 +98,7 @@
     }
     
     UILabel *apiKeylabel = [cell viewWithTag:1];
-    [apiKeylabel setText:[self.apiKeyList objectAtIndex:indexPath.row]];
+    [apiKeylabel setText:[self.apiKeyNames objectAtIndex:indexPath.row]];
     
     return cell;
 }

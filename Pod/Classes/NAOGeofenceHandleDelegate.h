@@ -19,6 +19,7 @@
  
  @param regionId: id of the region affected by the change
  @param regionName: name of the region affected by the change
+ @since 4.1.2
  */
 - (void) didEnterGeofence:(int)regionId andName:(NSString*)regionName;
 
@@ -26,6 +27,7 @@
  
  @param regionId: id of the region affected by the change
  @param regionName: name of the region affected by the change
+ @since 4.1.2
  */
 - (void) didExitGeofence:(int)regionId andName:(NSString*)regionName;
 

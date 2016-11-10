@@ -45,6 +45,16 @@
 /**
  
  */
++ (void)startLoggingMeasurements;
+
+/**
+ 
+ */
++ (void)stopLoggingMeasurements;
+
+/**
+ 
+ */
 + (DBTPOWERMODE) getPowerMode;
 
 /**

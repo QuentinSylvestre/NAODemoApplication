@@ -16,7 +16,7 @@
 @implementation ApplicationsTableViewController
 
 @synthesize services;
-@synthesize indoorLocationService, geofencingService, beaconProximityService, analyticsService, beaconReportingService, smartPark, allServices;
+@synthesize indoorLocationService, geofencingService, beaconProximityService, analyticsService, beaconReportingService, wakeService, allServices;
 
 
 
@@ -29,7 +29,7 @@
     beaconProximityService = @"BeaconProximity";
     analyticsService = @"Analytics";
     beaconReportingService = @"BeaconReporting";
-    smartPark = @"SmartPark";
+    wakeService = @"WakeService";
     allServices = @"AllServices";
 
     [services addObject:indoorLocationService];
@@ -37,7 +37,7 @@
     [services addObject:beaconProximityService];
     [services addObject:analyticsService];
     [services addObject:beaconReportingService];
-    [services addObject:smartPark];
+    [services addObject:wakeService];
     [services addObject:allServices];
     
     NSString *key = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
@@ -108,9 +108,9 @@
         [self performSegueWithIdentifier:@"BeaconReportingSegue" sender:self];
     }
     
-    if ([[self.services objectAtIndex:indexPath.row] isEqualToString:smartPark]) {
-        NSLog(@"%@",smartPark);
-        [self performSegueWithIdentifier:@"SmartParkMainSegue" sender:self];
+    if ([[self.services objectAtIndex:indexPath.row] isEqualToString:wakeService]) {
+        NSLog(@"%@",wakeService);
+        [self performSegueWithIdentifier:@"WakeServiceMainSegue" sender:self];
     }
     
     if ([[self.services objectAtIndex:indexPath.row] isEqualToString:allServices]) {

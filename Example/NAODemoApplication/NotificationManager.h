@@ -13,7 +13,6 @@
 
 - (id)init;
 - (void)displayNotificationWithMessage:(NSString *)message;
-- (void)displayWelcomeToParkingNotificationWithParkingName:(NSString *)parkingName startMapActivityKey:(NSString *)startMapActivityKey;
-- (void)displayParkingSlotNotificationWithparkingSlot:(NSString *)parkingSlot startMapActivityKey:(NSString *)startMapActivityKey parkingSlotKey:(NSString *)parkingSlotKey;
+- (void)displayNotificationWithMessage:(NSString *)message withTimer:(NSNumber *)timer;
 
 @end

@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "SmartPark.h"
-#import "MapViewController.h"
+#import "WakeService.h"
 
 #import "NaoContext.h"
 #import "NAOServicesConfig.h"
@@ -28,11 +27,11 @@
       
     if ([launchOptions objectForKey:UIApplicationLaunchOptionsLocationKey]) {
         NSLog(@"NaoDemoApplication : AppDelegate : restart by iBeacon");
-        NSString *key = [[NSUserDefaults standardUserDefaults] objectForKey:SMART_PARK_MODE];
-        if (key != nil && [key isEqualToString:SMART_PARK_ON]) {
-            NSLog(@"NaoDemoApplication : AppDelegate : restart SmartPark");
-            SmartPark *smartPark = [[SmartPark alloc] init];
-            [smartPark startLocation];
+        NSString *key = [[NSUserDefaults standardUserDefaults] objectForKey:WAKE_SERVICE_MODE];
+        if (key != nil && [key isEqualToString:WAKE_SERVICE_ON]) {
+            NSLog(@"NaoDemoApplication : AppDelegate : restart WakeLock");
+            WakeService *wakeService = [WakeService sharedInstance];;
+            [wakeService startLocation];
         }
     }
     
@@ -75,21 +74,7 @@
     NSLog(@"LocalNotification state=%ld", (long)application.applicationState);
     
     if ([application applicationState] != UIApplicationStateActive) { //Don't execute this if app is in foreground
-        if ([notification.userInfo objectForKey:START_MAP_ACTIVITY_KEY]) {
-            NSLog(@"NAODemoApp : didReceiveLocalNotification : startMapActivity");
-            
-            UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            MapViewController *mapView = [storyboard instantiateViewControllerWithIdentifier:@"MapViewController"];
-            
-            if ([notification.userInfo objectForKey:PARKING_SLOT_KEY]) {
-                NSString *parkingSlot = [notification.userInfo objectForKey:PARKING_SLOT_KEY];
-                NSLog(@"NAODemoApp : didReceiveLocalNotification : startMapActivity : parkingSlot=%@", parkingSlot);
-                
-                mapView.parkingSlot = parkingSlot;
-            }
-            
-            [(UINavigationController *)self.window.rootViewController pushViewController:mapView animated:YES];
-        }
+
     } else { //App is on foreground, the notification will not be displayed so do here foreground code
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     }

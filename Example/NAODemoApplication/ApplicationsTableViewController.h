@@ -23,7 +23,7 @@
 @property (nonatomic) NSString* beaconProximityService;
 @property (nonatomic) NSString* analyticsService;
 @property (nonatomic) NSString* beaconReportingService;
-@property (nonatomic) NSString* smartPark;
+@property (nonatomic) NSString* wakeService;
 @property (nonatomic) NSString* allServices;
 
 @end

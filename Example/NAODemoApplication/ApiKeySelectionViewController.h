@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *apiKeyTextField;
 @property (weak, nonatomic) IBOutlet UITableView *apiKeySelectionTableView;
-@property NSArray *apiKeyList;
+@property NSMutableArray *apiKeyList;
+@property NSMutableArray *apiKeyNames;
 
 @end
