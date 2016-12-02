@@ -13,9 +13,6 @@
 		6F23A4D71D76E75800DB85C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F23A4D51D76E75800DB85C3 /* Main.storyboard */; };
 		6F23A4D91D76E75800DB85C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F23A4D81D76E75800DB85C3 /* Assets.xcassets */; };
 		6F23A4DC1D76E75800DB85C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F23A4DA1D76E75800DB85C3 /* LaunchScreen.storyboard */; };
-		6F23A4EA1D76E89600DB85C3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F23A4E51D76E89600DB85C3 /* MapViewController.m */; };
-		6F23A4EB1D76E89600DB85C3 /* SmartPark.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F23A4E71D76E89600DB85C3 /* SmartPark.m */; };
-		6F23A4EC1D76E89600DB85C3 /* SmartParkMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F23A4E91D76E89600DB85C3 /* SmartParkMainViewController.m */; };
 		6F23A4F41D76E8B400DB85C3 /* AnalyticsSynchroManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F23A4EF1D76E8B400DB85C3 /* AnalyticsSynchroManager.m */; };
 		6F23A4F51D76E8B400DB85C3 /* GeofencingSynchroManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F23A4F21D76E8B400DB85C3 /* GeofencingSynchroManager.m */; };
 		6F23A4F81D76E8CD00DB85C3 /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F23A4F71D76E8CD00DB85C3 /* NotificationManager.m */; };
@@ -54,12 +51,6 @@
 		6F23A4D81D76E75800DB85C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F23A4DB1D76E75800DB85C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F23A4DD1D76E75800DB85C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6F23A4E41D76E89600DB85C3 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		6F23A4E51D76E89600DB85C3 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		6F23A4E61D76E89600DB85C3 /* SmartPark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartPark.h; sourceTree = "<group>"; };
-		6F23A4E71D76E89600DB85C3 /* SmartPark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartPark.m; sourceTree = "<group>"; };
-		6F23A4E81D76E89600DB85C3 /* SmartParkMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartParkMainViewController.h; sourceTree = "<group>"; };
-		6F23A4E91D76E89600DB85C3 /* SmartParkMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartParkMainViewController.m; sourceTree = "<group>"; };
 		6F23A4EE1D76E8B400DB85C3 /* AnalyticsSynchroManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalyticsSynchroManager.h; sourceTree = "<group>"; };
 		6F23A4EF1D76E8B400DB85C3 /* AnalyticsSynchroManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalyticsSynchroManager.m; sourceTree = "<group>"; };
 		6F23A4F01D76E8B400DB85C3 /* AnalyticsSynchroManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalyticsSynchroManagerDelegate.h; sourceTree = "<group>"; };
@@ -142,7 +133,6 @@
 				6F23A4CF1D76E75700DB85C3 /* AppDelegate.h */,
 				6F23A4D01D76E75700DB85C3 /* AppDelegate.m */,
 				6F23A4ED1D76E89F00DB85C3 /* SynchroManagers */,
-				6F23A4E31D76E88300DB85C3 /* SmartPark */,
 				6F23A4D21D76E75700DB85C3 /* ViewController.h */,
 				6F23A4F91D76E8FF00DB85C3 /* AllServicesViewController.h */,
 				6F23A4FA1D76E8FF00DB85C3 /* AllServicesViewController.m */,
@@ -178,19 +168,6 @@
 				6F23A4CD1D76E75700DB85C3 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6F23A4E31D76E88300DB85C3 /* SmartPark */ = {
-			isa = PBXGroup;
-			children = (
-				6F23A4E41D76E89600DB85C3 /* MapViewController.h */,
-				6F23A4E51D76E89600DB85C3 /* MapViewController.m */,
-				6F23A4E61D76E89600DB85C3 /* SmartPark.h */,
-				6F23A4E71D76E89600DB85C3 /* SmartPark.m */,
-				6F23A4E81D76E89600DB85C3 /* SmartParkMainViewController.h */,
-				6F23A4E91D76E89600DB85C3 /* SmartParkMainViewController.m */,
-			);
-			name = SmartPark;
 			sourceTree = "<group>";
 		};
 		6F23A4ED1D76E89F00DB85C3 /* SynchroManagers */ = {
@@ -442,9 +419,7 @@
 				6F23A50D1D76E8FF00DB85C3 /* BeaconProximityViewController.m in Sources */,
 				6F23A4CE1D76E75700DB85C3 /* main.m in Sources */,
 				6F23A4F51D76E8B400DB85C3 /* GeofencingSynchroManager.m in Sources */,
-				6F23A4EC1D76E89600DB85C3 /* SmartParkMainViewController.m in Sources */,
 				6F23A50E1D76E8FF00DB85C3 /* BeaconReportingViewController.m in Sources */,
-				6F23A4EB1D76E89600DB85C3 /* SmartPark.m in Sources */,
 				6F23A4F81D76E8CD00DB85C3 /* NotificationManager.m in Sources */,
 				6F23A50F1D76E8FF00DB85C3 /* GeofencingViewController.m in Sources */,
 				6F23A50C1D76E8FF00DB85C3 /* ApplicationsTableViewController.m in Sources */,
@@ -452,7 +427,6 @@
 				6F23A5091D76E8FF00DB85C3 /* AllServicesViewController.m in Sources */,
 				6F23A50A1D76E8FF00DB85C3 /* AnalyticsViewController.m in Sources */,
 				6F23A50B1D76E8FF00DB85C3 /* ApiKeySelectionViewController.m in Sources */,
-				6F23A4EA1D76E89600DB85C3 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
