@@ -143,6 +143,11 @@
     [self.lastAlertLabel setText:[NSString stringWithFormat:@"Last alert : %@", alertText]];
     NSLog(@"NAODemoApp : %@ : %@ : %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), alertText);
     [self.notificationManager displayNotificationWithMessage:[NSString stringWithFormat:@"%@ : %@", NSStringFromSelector(_cmd), alertText]];
+    
+    NAOGeofenceData *regiondata = [self.geofencingHandle getGeofenceData:[alert.rules objectAtIndex:0].regionId];
+    
+    NSLog(@".....................%@",regiondata.category);
+    NSLog(@".....................%@",regiondata.name);
 }
 
 - (void) didFailWithErrorCode:(DBNAOERRORCODE)errCode andMessage:(NSString *)message {

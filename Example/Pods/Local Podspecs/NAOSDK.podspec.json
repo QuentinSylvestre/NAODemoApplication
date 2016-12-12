@@ -1,6 +1,6 @@
 {
   "name": "NAOSDK",
-  "version": "4.2.1",
+  "version": "4.2.2",
   "summary": "NAOSDK is the Polestar indoor location services SDK.",
   "description": "The following services are available in NAOSDK:\n\n- Location Service\n- Geofencing Service\n- Beacon Proximity Service\n- Analytics Service\n- Beacon Maintenance and Reporting Service",
   "homepage": "http://docs.nao-cloud.com/",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://bitbucket.org/polestarusa/naosdk.git",
-    "tag": "4.2.1"
+    "tag": "4.2.2"
   },
   "platforms": {
     "ios": "8.0"

@@ -16,53 +16,54 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04E62EE9DF671434F895A3A6CBAB95D2 /* NAOServicesConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOServicesConfig.h; sourceTree = "<group>"; };
 		06F8CA0032A8E8151E6DABABCD333153 /* Pods-NAODemoApplicationUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NAODemoApplicationUITests-resources.sh"; sourceTree = "<group>"; };
-		0903F3BD240E2D0217676DADA899C507 /* NAOBeaconReportingHandleDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOBeaconReportingHandleDelegate.h; sourceTree = "<group>"; };
 		0978F65FE12AF8A14B4BEB08B3D66121 /* Pods-NAODemoApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NAODemoApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		0BE49EA83B758081325C754F55716FA7 /* Pods-NAODemoApplicationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NAODemoApplicationUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		107A21EAF2A11558E077711AE1517B3C /* NAOServiceHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOServiceHandle.h; sourceTree = "<group>"; };
-		1C3961E87642572C110927DF7078E341 /* NAOAnalyticsHandleDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOAnalyticsHandleDelegate.h; sourceTree = "<group>"; };
-		1E9D12DFB86374E33B2FA8A7CA41D1BC /* NAOBeaconReportingHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOBeaconReportingHandle.h; sourceTree = "<group>"; };
+		0F3819DE0C010B3F6878A9A4454BC121 /* DBNAOAlertRule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DBNAOAlertRule.h; sourceTree = "<group>"; };
+		14E7127755036352A2789BACED532366 /* DBTBEACONSTATE.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DBTBEACONSTATE.h; sourceTree = "<group>"; };
+		20B754CF2549BBE6EF6906970E37A555 /* NAOBeaconReportingHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOBeaconReportingHandle.h; sourceTree = "<group>"; };
 		2134A42DA78A06FB81FED6860718F8CB /* Pods-NAODemoApplication.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NAODemoApplication.modulemap"; sourceTree = "<group>"; };
-		45C067AFCE0B4AF554EA09C52983C55C /* DBNAOERRORCODE.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DBNAOERRORCODE.h; sourceTree = "<group>"; };
+		261DC82C535B64F5DC470AB1D737ECCB /* NAOGeofenceHandleDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOGeofenceHandleDelegate.h; sourceTree = "<group>"; };
+		3AF71FF0F06B474E6DBA062B2FCF5975 /* NAOGeofencingHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOGeofencingHandle.h; sourceTree = "<group>"; };
+		47890BB5CC9DD174327B7478E93BEF89 /* NAOAnalyticsHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOAnalyticsHandle.h; sourceTree = "<group>"; };
 		4C40B9439394E5D87775FA90723DBBD8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D245128C637C084338F0898AEC10AF2 /* NAOAnalyticsHandleDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOAnalyticsHandleDelegate.h; sourceTree = "<group>"; };
 		527DCAF107DA8F7EB145A012B8367BDE /* Pods-NAODemoApplication-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NAODemoApplication-acknowledgements.markdown"; sourceTree = "<group>"; };
-		533A05C0BCE0EC72A7B92A5243BAB07E /* NAOGeofenceHandleDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOGeofenceHandleDelegate.h; sourceTree = "<group>"; };
-		57BC2A55627427C134B426F8FE7A908A /* DBTALERTRULE.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DBTALERTRULE.h; sourceTree = "<group>"; };
-		5A3A14EAE8F9F21AF63BA6B5BB51623A /* NAOSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOSDK.h; sourceTree = "<group>"; };
-		5B52C740CFC501BFEF6CD1F239C4C833 /* NAOGeofencingHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOGeofencingHandle.h; sourceTree = "<group>"; };
+		57DFCA582ADA8CFAE52136634D5505FA /* NaoAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NaoAlert.h; sourceTree = "<group>"; };
+		6443B6228443E6CD5F7E105583E095FF /* DBTALERTRULE.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DBTALERTRULE.h; sourceTree = "<group>"; };
+		6540F2A55CA3C30E1172F7471D7E2094 /* NAOServiceHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOServiceHandle.h; sourceTree = "<group>"; };
 		695B8044B78D5C09FFA2057C896BDD7C /* Pods-NAODemoApplication-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NAODemoApplication-acknowledgements.plist"; sourceTree = "<group>"; };
-		69764B2A8387FD59099FE7D7DF3E5473 /* NAOLocationHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOLocationHandle.h; sourceTree = "<group>"; };
 		6A3D6BABA96E232F1D2C26D96532C304 /* Pods-NAODemoApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NAODemoApplication.release.xcconfig"; sourceTree = "<group>"; };
+		79DD1F636FE62728E0544931126E2B70 /* DBTPOWERMODE.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DBTPOWERMODE.h; sourceTree = "<group>"; };
 		7A0C4104CD8494AA131A8724EFBAAFB4 /* Pods-NAODemoApplicationUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NAODemoApplicationUITests-dummy.m"; sourceTree = "<group>"; };
+		8119EF94E26315D952862488CF06631D /* NAOSyncDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOSyncDelegate.h; sourceTree = "<group>"; };
 		842C9EAABE91779746D9B063B6F73B40 /* Pods-NAODemoApplication-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NAODemoApplication-frameworks.sh"; sourceTree = "<group>"; };
-		879F4EB62EFEDF72B10C0580A286FDDE /* DBNAOAlertRule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DBNAOAlertRule.h; sourceTree = "<group>"; };
+		86782A65E6227AB0A39EE2EA978E630E /* NAOBeaconReportingHandleDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOBeaconReportingHandleDelegate.h; sourceTree = "<group>"; };
+		8A6516D373C07A4CF2CC5D9C65218529 /* DBNAOERRORCODE.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DBNAOERRORCODE.h; sourceTree = "<group>"; };
+		8AE2EC747A4837B7417F6B4A587E2F72 /* NAOBeaconProximityHandleDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOBeaconProximityHandleDelegate.h; sourceTree = "<group>"; };
+		8FCB01BA9F7C1FCFA630139B56803287 /* NAOSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOSDK.h; sourceTree = "<group>"; };
 		91F9B49E437E1865331B9A839B34BDF7 /* Pods-NAODemoApplication-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NAODemoApplication-dummy.m"; sourceTree = "<group>"; };
-		92D6C55DC40E4DB8523EBBCD8DFE0534 /* NAOAnalyticsHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOAnalyticsHandle.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		947E653421109F014A9A2573223564FD /* NaoContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NaoContext.h; sourceTree = "<group>"; };
+		950F1F6CA26E16B3E902D32E39F8E8C9 /* NAOGeofenceData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOGeofenceData.h; sourceTree = "<group>"; };
 		9E5E7FC1B80414A9489BD513F74E6B71 /* Pods-NAODemoApplicationUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NAODemoApplicationUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A00A98B474CC4C8DE8CE71F136D5CE0D /* Pods-NAODemoApplicationUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NAODemoApplicationUITests.modulemap"; sourceTree = "<group>"; };
 		A11844AA4AB282E30B40D0EC03418063 /* Pods-NAODemoApplicationUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NAODemoApplicationUITests-umbrella.h"; sourceTree = "<group>"; };
 		A422FC00FF39272544E04A0BF1D1338A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A63CEE2D2EC2FC9568C394BE89663047 /* NAOLocationHandleDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOLocationHandleDelegate.h; sourceTree = "<group>"; };
-		ABA13A1BF58855E05EAD186BC501921B /* NAOSensorsDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOSensorsDelegate.h; sourceTree = "<group>"; };
-		AC2DDBA9764EBAD53E7BE2318A673AFB /* NAOGeofencingHandleDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOGeofencingHandleDelegate.h; sourceTree = "<group>"; };
-		B9343EA468CA8CE793FBFBBA301F2191 /* DBTBEACONSTATE.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DBTBEACONSTATE.h; sourceTree = "<group>"; };
+		ACBBF20B139BCD9347DF4173509B9756 /* NAOBeaconProximityHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOBeaconProximityHandle.h; sourceTree = "<group>"; };
+		B446850ECA5F32B407567ECEAFD3AA5D /* DBTNAOFIXSTATUS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DBTNAOFIXSTATUS.h; sourceTree = "<group>"; };
+		B57FAFEA658A9104993EF32BA8C38469 /* NAOSensorsDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOSensorsDelegate.h; sourceTree = "<group>"; };
+		BB9E6025B346ABB22E72D5A956C5A78B /* NAOLocationHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOLocationHandle.h; sourceTree = "<group>"; };
+		BC9564879BEA9BF8F0C86E8B0BC2446D /* NAOGeofencingHandleDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOGeofencingHandleDelegate.h; sourceTree = "<group>"; };
 		C315994959F1FF5555B9FC1F8AFC50C0 /* libNAOSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libNAOSDK.a; path = Pod/Classes/libNAOSDK.a; sourceTree = "<group>"; };
-		C817688F6017625579AC7B2A1C489C6E /* DBTPOWERMODE.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DBTPOWERMODE.h; sourceTree = "<group>"; };
-		C9B3468559C7A0E6816922B0C45CDAFC /* NAOBeaconProximityHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOBeaconProximityHandle.h; sourceTree = "<group>"; };
+		C974D482712C39AEAC84CF90A98CF671 /* NAOServicesConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOServicesConfig.h; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D05DEA5FCB8A7B44709FA091E6481A70 /* Pods-NAODemoApplicationUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NAODemoApplicationUITests-frameworks.sh"; sourceTree = "<group>"; };
-		D1AF6BEBA44E9AB0587A80D9A1E8A77A /* NaoAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NaoAlert.h; sourceTree = "<group>"; };
-		D76E3A06AC03909B27B213977B1D2C88 /* NAOSyncDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOSyncDelegate.h; sourceTree = "<group>"; };
-		DCF0469A205E165DC4DAE7A3AA8007F0 /* NAOBeaconProximityHandleDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOBeaconProximityHandleDelegate.h; sourceTree = "<group>"; };
-		DEFE7EFCDF1CDA452BA8F9CECEF7C951 /* DBTNAOFIXSTATUS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DBTNAOFIXSTATUS.h; sourceTree = "<group>"; };
 		E0DBC68D2F12A4B768750D98DF3D15CD /* Pods-NAODemoApplication-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NAODemoApplication-umbrella.h"; sourceTree = "<group>"; };
 		E65942034717B9C7F85DC65227BF370C /* Pods-NAODemoApplicationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NAODemoApplicationUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E70694C891C30FA805F2C00705C55611 /* Pods_NAODemoApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NAODemoApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E70A40F52F9F774968F419D046ADDF4F /* NAOLocationHandleDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOLocationHandleDelegate.h; sourceTree = "<group>"; };
 		EFB8040AA353E7E9DBF46586EF4EDD94 /* Pods_NAODemoApplicationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NAODemoApplicationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1EC95970B6CC5F34F8273BE0F1411BD /* NaoContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NaoContext.h; sourceTree = "<group>"; };
 		F608649338138B2B984A733D21F87D56 /* Pods-NAODemoApplicationUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NAODemoApplicationUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F8388F2399771361D078CF56FCB8924E /* Pods-NAODemoApplication-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NAODemoApplication-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,14 +105,6 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		2C632D32D093C532E11C7136B5B4D6B2 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				4746B068E59A7E18B4DA610F1DC32A56 /* Classes */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,37 +131,6 @@
 			path = "Target Support Files/Pods-NAODemoApplicationUITests";
 			sourceTree = "<group>";
 		};
-		4746B068E59A7E18B4DA610F1DC32A56 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				879F4EB62EFEDF72B10C0580A286FDDE /* DBNAOAlertRule.h */,
-				45C067AFCE0B4AF554EA09C52983C55C /* DBNAOERRORCODE.h */,
-				57BC2A55627427C134B426F8FE7A908A /* DBTALERTRULE.h */,
-				B9343EA468CA8CE793FBFBBA301F2191 /* DBTBEACONSTATE.h */,
-				DEFE7EFCDF1CDA452BA8F9CECEF7C951 /* DBTNAOFIXSTATUS.h */,
-				C817688F6017625579AC7B2A1C489C6E /* DBTPOWERMODE.h */,
-				D1AF6BEBA44E9AB0587A80D9A1E8A77A /* NaoAlert.h */,
-				92D6C55DC40E4DB8523EBBCD8DFE0534 /* NAOAnalyticsHandle.h */,
-				1C3961E87642572C110927DF7078E341 /* NAOAnalyticsHandleDelegate.h */,
-				C9B3468559C7A0E6816922B0C45CDAFC /* NAOBeaconProximityHandle.h */,
-				DCF0469A205E165DC4DAE7A3AA8007F0 /* NAOBeaconProximityHandleDelegate.h */,
-				1E9D12DFB86374E33B2FA8A7CA41D1BC /* NAOBeaconReportingHandle.h */,
-				0903F3BD240E2D0217676DADA899C507 /* NAOBeaconReportingHandleDelegate.h */,
-				F1EC95970B6CC5F34F8273BE0F1411BD /* NaoContext.h */,
-				533A05C0BCE0EC72A7B92A5243BAB07E /* NAOGeofenceHandleDelegate.h */,
-				5B52C740CFC501BFEF6CD1F239C4C833 /* NAOGeofencingHandle.h */,
-				AC2DDBA9764EBAD53E7BE2318A673AFB /* NAOGeofencingHandleDelegate.h */,
-				69764B2A8387FD59099FE7D7DF3E5473 /* NAOLocationHandle.h */,
-				A63CEE2D2EC2FC9568C394BE89663047 /* NAOLocationHandleDelegate.h */,
-				5A3A14EAE8F9F21AF63BA6B5BB51623A /* NAOSDK.h */,
-				ABA13A1BF58855E05EAD186BC501921B /* NAOSensorsDelegate.h */,
-				107A21EAF2A11558E077711AE1517B3C /* NAOServiceHandle.h */,
-				04E62EE9DF671434F895A3A6CBAB95D2 /* NAOServicesConfig.h */,
-				D76E3A06AC03909B27B213977B1D2C88 /* NAOSyncDelegate.h */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		554377B9935E24D05DA7F2E115F0FB08 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				EA9925A5E5AABAF3C8C6D057235EA635 /* Frameworks */,
-				2C632D32D093C532E11C7136B5B4D6B2 /* Pod */,
+				CE9444CBFE5D45AFEF495D8A30B6C153 /* Pod */,
 			);
 			name = NAOSDK;
 			path = ../..;
@@ -217,12 +179,52 @@
 			);
 			sourceTree = "<group>";
 		};
+		A4C1FECE2C528C5E2BA45197FF25FF72 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0F3819DE0C010B3F6878A9A4454BC121 /* DBNAOAlertRule.h */,
+				8A6516D373C07A4CF2CC5D9C65218529 /* DBNAOERRORCODE.h */,
+				6443B6228443E6CD5F7E105583E095FF /* DBTALERTRULE.h */,
+				14E7127755036352A2789BACED532366 /* DBTBEACONSTATE.h */,
+				B446850ECA5F32B407567ECEAFD3AA5D /* DBTNAOFIXSTATUS.h */,
+				79DD1F636FE62728E0544931126E2B70 /* DBTPOWERMODE.h */,
+				57DFCA582ADA8CFAE52136634D5505FA /* NaoAlert.h */,
+				47890BB5CC9DD174327B7478E93BEF89 /* NAOAnalyticsHandle.h */,
+				4D245128C637C084338F0898AEC10AF2 /* NAOAnalyticsHandleDelegate.h */,
+				ACBBF20B139BCD9347DF4173509B9756 /* NAOBeaconProximityHandle.h */,
+				8AE2EC747A4837B7417F6B4A587E2F72 /* NAOBeaconProximityHandleDelegate.h */,
+				20B754CF2549BBE6EF6906970E37A555 /* NAOBeaconReportingHandle.h */,
+				86782A65E6227AB0A39EE2EA978E630E /* NAOBeaconReportingHandleDelegate.h */,
+				947E653421109F014A9A2573223564FD /* NaoContext.h */,
+				950F1F6CA26E16B3E902D32E39F8E8C9 /* NAOGeofenceData.h */,
+				261DC82C535B64F5DC470AB1D737ECCB /* NAOGeofenceHandleDelegate.h */,
+				3AF71FF0F06B474E6DBA062B2FCF5975 /* NAOGeofencingHandle.h */,
+				BC9564879BEA9BF8F0C86E8B0BC2446D /* NAOGeofencingHandleDelegate.h */,
+				BB9E6025B346ABB22E72D5A956C5A78B /* NAOLocationHandle.h */,
+				E70A40F52F9F774968F419D046ADDF4F /* NAOLocationHandleDelegate.h */,
+				8FCB01BA9F7C1FCFA630139B56803287 /* NAOSDK.h */,
+				B57FAFEA658A9104993EF32BA8C38469 /* NAOSensorsDelegate.h */,
+				6540F2A55CA3C30E1172F7471D7E2094 /* NAOServiceHandle.h */,
+				C974D482712C39AEAC84CF90A98CF671 /* NAOServicesConfig.h */,
+				8119EF94E26315D952862488CF06631D /* NAOSyncDelegate.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE9444CBFE5D45AFEF495D8A30B6C153 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				A4C1FECE2C528C5E2BA45197FF25FF72 /* Classes */,
+			);
+			path = Pod;
 			sourceTree = "<group>";
 		};
 		EA9925A5E5AABAF3C8C6D057235EA635 /* Frameworks */ = {

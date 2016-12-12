@@ -12,6 +12,7 @@
 #import "NAOSyncDelegate.h"
 #import "NAOSensorsDelegate.h"
 #import "NAOServiceHandle.h"
+#import "NAOGeofenceData.h"
 
 @class NaoContext;
 
@@ -43,6 +44,15 @@
  @param sensorsDelegate: Object implementing the NAOSensorsDelegate protocol
  */
 - (id _Nonnull)initWithKey:(NSString * _Nonnull)key delegate:(id<NAOGeofencingHandleDelegate> _Nonnull)delegate sensorsDelegate:(id<NAOSensorsDelegate> _Nonnull)sensorsDelegate;
+
+/**
+ 
+ 
+ @param geofenceId: Id of geofence affected
+ @return: Return data information for geofence defined with geofenceId
+ @since 4.2.2
+ */
+-(NAOGeofenceData *)getGeofenceData:(int)geofenceId;
 
 - (id _Nonnull)initWithNaoContext:(NaoContext * _Nullable)naoContext key:(NSString * _Nonnull)key delegate:(id<NAOGeofencingHandleDelegate> _Nonnull)delegate sensorsDelegate:(id<NAOSensorsDelegate> _Nonnull)sensorsDelegate ;
 

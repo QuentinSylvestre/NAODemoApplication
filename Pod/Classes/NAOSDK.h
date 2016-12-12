@@ -34,6 +34,7 @@
 #import "NAOServiceHandle.h"
 #import "NAOServicesConfig.h"
 #import "NAOSyncDelegate.h"
+#import "NAOGeofenceData.h"
 
 
 #endif /* NAOSDK_h */
