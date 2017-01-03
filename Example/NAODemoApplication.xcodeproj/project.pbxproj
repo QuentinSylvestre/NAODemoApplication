@@ -25,6 +25,8 @@
 		6F23A50F1D76E8FF00DB85C3 /* GeofencingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F23A5061D76E8FF00DB85C3 /* GeofencingViewController.m */; };
 		6F23A5101D76E8FF00DB85C3 /* IndoorLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F23A5081D76E8FF00DB85C3 /* IndoorLocationViewController.m */; };
 		6F23A5181D76E99100DB85C3 /* NAODemoApplicationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F23A5171D76E99100DB85C3 /* NAODemoApplicationUITests.m */; };
+		6FEF78A41E1BF719001F98DF /* WakeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEF78A11E1BF719001F98DF /* WakeService.m */; };
+		6FEF78A51E1BF719001F98DF /* WakeServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEF78A31E1BF719001F98DF /* WakeServiceViewController.m */; };
 		7C9C1148308582A177B2DDE2 /* Pods_NAODemoApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5622CDA24482FD728116A7A5 /* Pods_NAODemoApplication.framework */; };
 		7DB35FAC5AECDB6AE9BDF5EC /* Pods_NAODemoApplicationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7C4184ABFF569B0A4FA8D8 /* Pods_NAODemoApplicationUITests.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +82,10 @@
 		6F23A5191D76E99100DB85C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F23A51F1D76EB5400DB85C3 /* libNAOSDKPOD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNAOSDKPOD.a; path = "build/Debug-iphoneos/NAOSDKPOD/libNAOSDKPOD.a"; sourceTree = "<group>"; };
 		6F23A5231D76F13400DB85C3 /* libNAOSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNAOSDK.a; path = Pods/NAOSDKPOD/Pod/Classes/libNAOSDK.a; sourceTree = "<group>"; };
+		6FEF78A01E1BF719001F98DF /* WakeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WakeService.h; sourceTree = "<group>"; };
+		6FEF78A11E1BF719001F98DF /* WakeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WakeService.m; sourceTree = "<group>"; };
+		6FEF78A21E1BF719001F98DF /* WakeServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WakeServiceViewController.h; sourceTree = "<group>"; };
+		6FEF78A31E1BF719001F98DF /* WakeServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WakeServiceViewController.m; sourceTree = "<group>"; };
 		9F7EEFDFB0E5FFA32407063E /* Pods-NAODemoApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NAODemoApplication.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NAODemoApplication/Pods-NAODemoApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		BA5F068CD699CC598CE8DC26 /* Pods-NAODemoApplicationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NAODemoApplicationUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NAODemoApplicationUITests/Pods-NAODemoApplicationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C17070F1CA0546DD8AFA9180 /* Pods-NAODemoApplicationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NAODemoApplicationUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NAODemoApplicationUITests/Pods-NAODemoApplicationUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +159,10 @@
 				6F23A4D31D76E75700DB85C3 /* ViewController.m */,
 				6F23A4F61D76E8CD00DB85C3 /* NotificationManager.h */,
 				6F23A4F71D76E8CD00DB85C3 /* NotificationManager.m */,
+				6FEF78A01E1BF719001F98DF /* WakeService.h */,
+				6FEF78A11E1BF719001F98DF /* WakeService.m */,
+				6FEF78A21E1BF719001F98DF /* WakeServiceViewController.h */,
+				6FEF78A31E1BF719001F98DF /* WakeServiceViewController.m */,
 				6F23A4D51D76E75800DB85C3 /* Main.storyboard */,
 				6F23A4D81D76E75800DB85C3 /* Assets.xcassets */,
 				6F23A4DA1D76E75800DB85C3 /* LaunchScreen.storyboard */,
@@ -415,6 +425,7 @@
 			files = (
 				6F23A4D41D76E75700DB85C3 /* ViewController.m in Sources */,
 				6F23A5101D76E8FF00DB85C3 /* IndoorLocationViewController.m in Sources */,
+				6FEF78A41E1BF719001F98DF /* WakeService.m in Sources */,
 				6F23A4D11D76E75700DB85C3 /* AppDelegate.m in Sources */,
 				6F23A50D1D76E8FF00DB85C3 /* BeaconProximityViewController.m in Sources */,
 				6F23A4CE1D76E75700DB85C3 /* main.m in Sources */,
@@ -426,6 +437,7 @@
 				6F23A4F41D76E8B400DB85C3 /* AnalyticsSynchroManager.m in Sources */,
 				6F23A5091D76E8FF00DB85C3 /* AllServicesViewController.m in Sources */,
 				6F23A50A1D76E8FF00DB85C3 /* AnalyticsViewController.m in Sources */,
+				6FEF78A51E1BF719001F98DF /* WakeServiceViewController.m in Sources */,
 				6F23A50B1D76E8FF00DB85C3 /* ApiKeySelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
