@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <UserNotifications/UserNotifications.h>
 
-@interface NotificationManager : NSObject
+@interface NotificationManager : NSObject <UNUserNotificationCenterDelegate>
 
 - (id)init;
 - (void)displayNotificationWithMessage:(NSString *)message;

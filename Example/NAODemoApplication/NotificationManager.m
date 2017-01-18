@@ -7,7 +7,6 @@
 //
 
 #import "NotificationManager.h"
-#import <UserNotifications/UserNotifications.h>
 
 #define SYSTEM_VERSION_GRATERTHAN_OR_EQUALTO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
@@ -27,9 +26,11 @@
     if(SYSTEM_VERSION_GRATERTHAN_OR_EQUALTO(@"10.0")){
         // iOS >= 10 Notifications
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        center.delegate = self;
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNNotificationPresentationOptionAlert)
                               completionHandler:^(BOOL granted, NSError * _Nullable error) {
                                   if (!error) {
+                                      [[UIApplication sharedApplication] registerForRemoteNotifications];
                                       NSLog(@"request authorization succeeded!");
                                   }
                               }];
@@ -42,13 +43,6 @@
                                                                                                                               | UIUserNotificationTypeBadge)
                                                                                                                   categories:nil]];
             [[UIApplication sharedApplication] registerForRemoteNotifications];
-        }
-        else
-        {
-            // iOS < 8 Notifications
-            [[UIApplication sharedApplication] registerForRemoteNotificationTypes: (UIRemoteNotificationTypeBadge
-                                                                                    | UIRemoteNotificationTypeAlert
-                                                                                    | UIRemoteNotificationTypeSound)];
         }
     }
 }
@@ -101,6 +95,20 @@
             [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
         });
     }
+}
+
+
+#pragma mark - Implem of NUserNotificationCenterDelegate
+//Called when a notification is delivered to a foreground app.
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler{
+    NSLog(@"%@ : %@ : %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd),notification.request.content.userInfo);
+    completionHandler(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge);
+}
+
+//Called to let your app know which action was selected by the user for a given notification.
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)())completionHandler{
+    NSLog(@"%@ : %@ : %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd),response.notification.request.content.userInfo);
+    completionHandler();
 }
 
 @end

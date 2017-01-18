@@ -48,8 +48,8 @@
 /**
  
  
- @param geofenceId: Id of geofence affected
- @return: Return data information for geofence defined with geofenceId
+ @param geofenceId: Id of geofence wanted
+ @return: Return the NAOGeofenceData wanted
  @since 4.2.2
  */
 -(NAOGeofenceData *)getGeofenceData:(int)geofenceId;

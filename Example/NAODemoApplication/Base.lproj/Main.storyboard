@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11535.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="D6h-I9-Tpu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="D6h-I9-Tpu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11523"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,7 +50,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lMn-U5-aof" id="LeR-mS-YuP">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5s-z6-0aS">
@@ -115,7 +115,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oe8-56-dgO" id="n5e-Yu-nOp">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -221,9 +221,23 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdp-If-Acn">
+                                <rect key="frame" x="208" y="361" width="146" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCt-us-71Z">
+                                <rect key="frame" x="21" y="361" width="177" height="30"/>
+                                <state key="normal" title="Launch notification in (s): "/>
+                                <connections>
+                                    <action selector="launchScheduledNotification:" destination="xIL-iB-hUz" eventType="touchUpInside" id="5sT-OY-bxR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ZO3-l6-3oW" firstAttribute="top" secondItem="tdp-If-Acn" secondAttribute="bottom" constant="8" id="0Xa-9G-JcU"/>
                             <constraint firstAttribute="leadingMargin" secondItem="2IA-V8-yVM" secondAttribute="leading" id="7gY-qq-UUS"/>
                             <constraint firstAttribute="leadingMargin" secondItem="mPh-18-suZ" secondAttribute="leading" id="7zN-8E-P7F"/>
                             <constraint firstItem="vJ9-me-LIe" firstAttribute="centerX" secondItem="xaX-dd-kMM" secondAttribute="centerX" id="9Gw-WC-zM6"/>
@@ -231,10 +245,14 @@
                             <constraint firstItem="mPh-18-suZ" firstAttribute="centerX" secondItem="GED-h6-rLp" secondAttribute="centerX" id="CES-o5-OIv"/>
                             <constraint firstItem="U2d-Ny-sah" firstAttribute="top" secondItem="mPh-18-suZ" secondAttribute="bottom" constant="10" id="CIX-AB-ETM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vJ9-me-LIe" secondAttribute="trailing" id="Cyl-jg-Egh"/>
+                            <constraint firstItem="ZO3-l6-3oW" firstAttribute="top" secondItem="iCt-us-71Z" secondAttribute="bottom" constant="8" id="Di8-Mn-B3V"/>
                             <constraint firstItem="0sa-cP-SmX" firstAttribute="top" secondItem="HyP-By-9N7" secondAttribute="bottom" constant="8" id="LqM-Lu-fok"/>
                             <constraint firstItem="9RL-84-QA8" firstAttribute="centerX" secondItem="GED-h6-rLp" secondAttribute="centerX" id="MY0-5L-94L"/>
+                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="tdp-If-Acn" secondAttribute="trailing" priority="500" constant="5" id="Rcz-S1-Ktf"/>
                             <constraint firstItem="0sa-cP-SmX" firstAttribute="leading" secondItem="Y3i-9z-SiS" secondAttribute="trailing" constant="8" id="VQk-my-Arz"/>
                             <constraint firstItem="ZO3-l6-3oW" firstAttribute="centerX" secondItem="xaX-dd-kMM" secondAttribute="centerX" id="Wwt-NF-u35"/>
+                            <constraint firstItem="iCt-us-71Z" firstAttribute="leading" relation="lessThanOrEqual" secondItem="GED-h6-rLp" secondAttribute="leadingMargin" priority="500" constant="5" id="Xi3-ry-3XN"/>
+                            <constraint firstItem="tdp-If-Acn" firstAttribute="leading" secondItem="iCt-us-71Z" secondAttribute="trailing" constant="10" id="Xx1-wq-FWQ"/>
                             <constraint firstItem="9RL-84-QA8" firstAttribute="centerX" secondItem="vJ9-me-LIe" secondAttribute="centerX" id="aM5-9K-3Et"/>
                             <constraint firstItem="R9j-Mg-Ch7" firstAttribute="centerX" secondItem="GED-h6-rLp" secondAttribute="centerX" id="b0F-Dy-dXL"/>
                             <constraint firstItem="9RL-84-QA8" firstAttribute="top" secondItem="vJ9-me-LIe" secondAttribute="bottom" constant="30" id="bru-TQ-VRS"/>
@@ -249,6 +267,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="delaiNotificationTextField" destination="tdp-If-Acn" id="Mft-Bh-veA"/>
                         <outlet property="errorLabel" destination="mPh-18-suZ" id="i70-oL-eCT"/>
                         <outlet property="locationLabel" destination="vJ9-me-LIe" id="4OA-RM-JDw"/>
                         <outlet property="startButton" destination="ZO3-l6-3oW" id="kRk-us-ARg"/>
@@ -260,7 +279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ga-Ol-LTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="572" y="-192"/>
+            <point key="canvasLocation" x="572" y="-192.05397301349328"/>
         </scene>
         <!--Geofencing View Controller-->
         <scene sceneID="z4j-je-zTo">

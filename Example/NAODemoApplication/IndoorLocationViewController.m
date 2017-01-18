@@ -13,12 +13,14 @@
     UIActivityIndicatorView *spinner;
     BOOL startButtonState;
     BOOL stopButtonState;
+    int keyboardHeight;
 }
 
 @synthesize locationHandle;
 @synthesize statusLabel, locationLabel;
 
 - (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onEnterForeground) name:UIApplicationWillEnterForegroundNotification object:nil];
@@ -48,6 +50,40 @@
     stopButtonState = NO;
     startButtonState = YES;
     [self.stopButton setEnabled:stopButtonState];
+    
+    
+    //KeyBoard size on a iPhone SE
+    keyboardHeight = 253;
+    self.delaiNotificationTextField.delegate = self;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                          action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+
+-(void)dismissKeyboard {
+    [self.delaiNotificationTextField resignFirstResponder];
+}
+
+-(void)keyboardWillShow:(NSNotification*)notification {
+    // Animate the current view out of the way
+    NSDictionary* keyboardInfo = [notification userInfo];
+    NSValue* keyboardFrameBegin = [keyboardInfo valueForKey:UIKeyboardFrameBeginUserInfoKey];
+    CGRect keyboardFrameBeginRect = [keyboardFrameBegin CGRectValue];
+    keyboardHeight = keyboardFrameBeginRect.size.height;
+}
+
+-(void)keyboardWillHide:(NSNotification*)notification {
+    [self animateTextField:self.selectedTextView up: NO];
 }
 
 -(void) viewDidAppear:(BOOL)animated {
@@ -92,6 +128,17 @@
 - (IBAction)SynchronyzeButtonClicked:(id)sender {
     [self startWaiting];
     [self.locationHandle synchronizeData:self];
+}
+
+
+- (IBAction)launchScheduledNotification:(id)sender {
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    f.numberStyle = NSNumberFormatterDecimalStyle;
+    NSNumber *myNumber = [f numberFromString:self.delaiNotificationTextField.text];
+    
+    if (myNumber) {
+        [self.notificationManager displayNotificationWithMessage:@"Scheduled notification" withTimer:myNumber];
+    }
 }
 
 - (void)stopLoc {
@@ -158,7 +205,7 @@
 
 - (void) didLocationChange:(CLLocation *)location {
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.locationLabel.text = [NSString stringWithFormat:@"Location: %.6f,%.6f,%.3f,%.2f", location.coordinate.longitude, location.coordinate.latitude, location.altitude, location.course];
+        self.locationLabel.text = [NSString stringWithFormat:@"Location: %.6f,%.6f,%.3f,%.2f, accuracy : %.2f", location.coordinate.longitude, location.coordinate.latitude, location.altitude, location.course, location.horizontalAccuracy];
     });
 }
 
@@ -209,10 +256,10 @@
     [self.notificationManager displayNotificationWithMessage:[NSString stringWithFormat:@"%@ : %@", NSStringFromSelector(_cmd), name]];
 }
 
-//- (void) didExitSite:(NSString *)name {
-//    NSLog(@"NAODemoApp : %@ : %@ : %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), name);
-//    [self.notificationManager displayNotificationWithMessage:[NSString stringWithFormat:@"%@ : %@", NSStringFromSelector(_cmd), name]];
-//}
+- (void) didExitSite:(NSString *)name {
+    NSLog(@"NAODemoApp : %@ : %@ : %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), name);
+    [self.notificationManager displayNotificationWithMessage:[NSString stringWithFormat:@"%@ : %@", NSStringFromSelector(_cmd), name]];
+}
 
 #pragma mark - NAOSyncDelegate
 
@@ -255,6 +302,45 @@
 //Optional
 - (void)didCompassCalibrated {
     NSLog(@"NAODemoApp : %@ : %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    self.selectedTextView = textField;
+    [self animateTextField: textField up: YES];
+    return YES;
+}
+
+// It is important for you to hide the keyboard
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self animateTextField: textField up: NO];
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void) animateTextField: (UITextField*) textField up: (BOOL) up
+{
+    
+    int botTF = textField.frame.origin.y + textField.frame.size.height;
+    int heightLeft = self.view.frame.size.height - botTF;
+    int movementDistance = keyboardHeight - heightLeft;
+    
+    if (movementDistance < 0) {
+        movementDistance = 0;
+    }
+    
+    const float movementDuration = 0.3f; // tweak as needed
+    
+    int movement = (up ? -movementDistance : movementDistance);
+    
+    [UIView beginAnimations: @"anim" context: nil];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+    [UIView setAnimationDuration: movementDuration];
+    self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+    [UIView commitAnimations];
 }
 
 @end

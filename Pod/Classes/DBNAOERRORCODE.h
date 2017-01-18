@@ -3,7 +3,10 @@
 
 #import <Foundation/Foundation.h>
 
-/** Error codes */
+/**
+ *--objc-type-prefix DB
+ * Error codes
+ */
 typedef NS_ENUM(NSInteger, DBNAOERRORCODE)
 {
     /** Invalid API key : inconsistent key accross services or key does not match PDB: check for typo in your key, check your site details on NAO Cloud and contact Pole Star Team. */

@@ -3,7 +3,10 @@
 
 #import <Foundation/Foundation.h>
 
-/** NAO Services power modes (trade-off between accuracy and power consumption) */
+/**
+ *--objc-type-prefix DB
+ * NAO Services power modes (trade-off between accuracy and power consumption)
+ */
 typedef NS_ENUM(NSInteger, DBTPOWERMODE)
 {
     /** accurate power mode */

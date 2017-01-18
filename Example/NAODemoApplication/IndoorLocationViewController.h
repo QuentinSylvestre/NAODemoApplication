@@ -11,7 +11,7 @@
 #import "NotificationManager.h"
 
 
-@interface IndoorLocationViewController : UIViewController<NAOLocationHandleDelegate, NAOSyncDelegate, NAOSensorsDelegate>
+@interface IndoorLocationViewController : UIViewController<NAOLocationHandleDelegate, NAOSyncDelegate, NAOSensorsDelegate, UITextFieldDelegate>
 
 @property NAOLocationHandle* locationHandle;
 
@@ -22,6 +22,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *stopButton;
 @property (weak, nonatomic) IBOutlet UIButton *synchronyzeButton;
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;
+@property (weak, nonatomic) IBOutlet UITextField *delaiNotificationTextField;
+@property (weak, nonatomic) IBOutlet UITextField *selectedTextView;
+
 
 @property NotificationManager *notificationManager;
 
