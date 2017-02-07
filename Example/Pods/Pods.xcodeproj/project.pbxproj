@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		770CD733D358246EF8127C3AF9611F84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		8425886D39F940ABD7D8601DEC3C7595 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		A08F46B5656BA4C5EB13D2C000BFD467 /* Pods-NAODemoApplication-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F9B49E437E1865331B9A839B34BDF7 /* Pods-NAODemoApplication-dummy.m */; };
-		A7D58757A3871C588F983EC7C20559EE /* Pods-NAODemoApplicationUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C4104CD8494AA131A8724EFBAAFB4 /* Pods-NAODemoApplicationUITests-dummy.m */; };
-		D98907ED91755D44BAC92E1F40480CB0 /* Pods-NAODemoApplicationUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A11844AA4AB282E30B40D0EC03418063 /* Pods-NAODemoApplicationUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F6253A1DD54C0115815A0640EDFD91DD /* Pods-NAODemoApplication-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0DBC68D2F12A4B768750D98DF3D15CD /* Pods-NAODemoApplication-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4D7D86BA1B1FB6AF70F648FBA8C5C1D /* Pods-NAODemoApplication-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F9B49E437E1865331B9A839B34BDF7 /* Pods-NAODemoApplication-dummy.m */; };
+		AAB1B79DB96337A61B192B923974C7CA /* Pods-NAODemoApplicationUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A11844AA4AB282E30B40D0EC03418063 /* Pods-NAODemoApplicationUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D64274FFF24C51DEE370BE5BB4C88B47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		DC6384CEDD3B07A1C9FE603F92F35918 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		E0B6EFF4DE8A77E6DEDBB19A8EBAE4F7 /* Pods-NAODemoApplicationUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C4104CD8494AA131A8724EFBAAFB4 /* Pods-NAODemoApplicationUITests-dummy.m */; };
+		F2B9683E6C35F7220D5DE450D1237DEE /* Pods-NAODemoApplication-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0DBC68D2F12A4B768750D98DF3D15CD /* Pods-NAODemoApplication-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +22,7 @@
 		0F3819DE0C010B3F6878A9A4454BC121 /* DBNAOAlertRule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DBNAOAlertRule.h; sourceTree = "<group>"; };
 		14E7127755036352A2789BACED532366 /* DBTBEACONSTATE.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DBTBEACONSTATE.h; sourceTree = "<group>"; };
 		20B754CF2549BBE6EF6906970E37A555 /* NAOBeaconReportingHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOBeaconReportingHandle.h; sourceTree = "<group>"; };
-		2134A42DA78A06FB81FED6860718F8CB /* Pods-NAODemoApplication.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NAODemoApplication.modulemap"; sourceTree = "<group>"; };
+		2134A42DA78A06FB81FED6860718F8CB /* Pods-NAODemoApplication.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NAODemoApplication.modulemap"; sourceTree = "<group>"; };
 		261DC82C535B64F5DC470AB1D737ECCB /* NAOGeofenceHandleDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOGeofenceHandleDelegate.h; sourceTree = "<group>"; };
 		3AF71FF0F06B474E6DBA062B2FCF5975 /* NAOGeofencingHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOGeofencingHandle.h; sourceTree = "<group>"; };
 		47890BB5CC9DD174327B7478E93BEF89 /* NAOAnalyticsHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOAnalyticsHandle.h; sourceTree = "<group>"; };
@@ -43,11 +43,11 @@
 		8AE2EC747A4837B7417F6B4A587E2F72 /* NAOBeaconProximityHandleDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOBeaconProximityHandleDelegate.h; sourceTree = "<group>"; };
 		8FCB01BA9F7C1FCFA630139B56803287 /* NAOSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOSDK.h; sourceTree = "<group>"; };
 		91F9B49E437E1865331B9A839B34BDF7 /* Pods-NAODemoApplication-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NAODemoApplication-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		947E653421109F014A9A2573223564FD /* NaoContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NaoContext.h; sourceTree = "<group>"; };
 		950F1F6CA26E16B3E902D32E39F8E8C9 /* NAOGeofenceData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOGeofenceData.h; sourceTree = "<group>"; };
 		9E5E7FC1B80414A9489BD513F74E6B71 /* Pods-NAODemoApplicationUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NAODemoApplicationUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A00A98B474CC4C8DE8CE71F136D5CE0D /* Pods-NAODemoApplicationUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NAODemoApplicationUITests.modulemap"; sourceTree = "<group>"; };
+		A00A98B474CC4C8DE8CE71F136D5CE0D /* Pods-NAODemoApplicationUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NAODemoApplicationUITests.modulemap"; sourceTree = "<group>"; };
 		A11844AA4AB282E30B40D0EC03418063 /* Pods-NAODemoApplicationUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NAODemoApplicationUITests-umbrella.h"; sourceTree = "<group>"; };
 		A422FC00FF39272544E04A0BF1D1338A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACBBF20B139BCD9347DF4173509B9756 /* NAOBeaconProximityHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOBeaconProximityHandle.h; sourceTree = "<group>"; };
@@ -57,31 +57,31 @@
 		BC9564879BEA9BF8F0C86E8B0BC2446D /* NAOGeofencingHandleDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOGeofencingHandleDelegate.h; sourceTree = "<group>"; };
 		C315994959F1FF5555B9FC1F8AFC50C0 /* libNAOSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libNAOSDK.a; path = Pod/Classes/libNAOSDK.a; sourceTree = "<group>"; };
 		C974D482712C39AEAC84CF90A98CF671 /* NAOServicesConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOServicesConfig.h; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D05DEA5FCB8A7B44709FA091E6481A70 /* Pods-NAODemoApplicationUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NAODemoApplicationUITests-frameworks.sh"; sourceTree = "<group>"; };
 		E0DBC68D2F12A4B768750D98DF3D15CD /* Pods-NAODemoApplication-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NAODemoApplication-umbrella.h"; sourceTree = "<group>"; };
 		E65942034717B9C7F85DC65227BF370C /* Pods-NAODemoApplicationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NAODemoApplicationUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E70694C891C30FA805F2C00705C55611 /* Pods_NAODemoApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NAODemoApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E70694C891C30FA805F2C00705C55611 /* Pods_NAODemoApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NAODemoApplication.framework; path = "Pods-NAODemoApplication.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70A40F52F9F774968F419D046ADDF4F /* NAOLocationHandleDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NAOLocationHandleDelegate.h; sourceTree = "<group>"; };
-		EFB8040AA353E7E9DBF46586EF4EDD94 /* Pods_NAODemoApplicationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NAODemoApplicationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFB8040AA353E7E9DBF46586EF4EDD94 /* Pods_NAODemoApplicationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NAODemoApplicationUITests.framework; path = "Pods-NAODemoApplicationUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F608649338138B2B984A733D21F87D56 /* Pods-NAODemoApplicationUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NAODemoApplicationUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F8388F2399771361D078CF56FCB8924E /* Pods-NAODemoApplication-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NAODemoApplication-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3206AD18A5DF7A2460877A4FDD73E23A /* Frameworks */ = {
+		55276C194102CF2211DE6D176C45EE87 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8425886D39F940ABD7D8601DEC3C7595 /* Foundation.framework in Frameworks */,
+				DC6384CEDD3B07A1C9FE603F92F35918 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		39063FB7FAB9C510490F566761B7B545 /* Frameworks */ = {
+		E0C6BD3C9A43639FDD79639566395DD1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				770CD733D358246EF8127C3AF9611F84 /* Foundation.framework in Frameworks */,
+				D64274FFF24C51DEE370BE5BB4C88B47 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,14 +103,6 @@
 				6163FE60D97A2B31D6F44F78BE150D4C /* NAOSDK */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		46278C54B71F6FAA08A1A3F6FFB96AAF /* Pods-NAODemoApplicationUITests */ = {
@@ -168,6 +160,14 @@
 			path = "Target Support Files/Pods-NAODemoApplication";
 			sourceTree = "<group>";
 		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -208,13 +208,14 @@
 				C974D482712C39AEAC84CF90A98CF671 /* NAOServicesConfig.h */,
 				8119EF94E26315D952862488CF06631D /* NAOSyncDelegate.h */,
 			);
+			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -224,6 +225,7 @@
 			children = (
 				A4C1FECE2C528C5E2BA45197FF25FF72 /* Classes */,
 			);
+			name = Pod;
 			path = Pod;
 			sourceTree = "<group>";
 		};
@@ -238,49 +240,32 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3D43ECB7E78B782DD5E58BDA063F124F /* Headers */ = {
+		1767DC0ED66497FC717DCB0A7D23C341 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6253A1DD54C0115815A0640EDFD91DD /* Pods-NAODemoApplication-umbrella.h in Headers */,
+				AAB1B79DB96337A61B192B923974C7CA /* Pods-NAODemoApplicationUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFA1D63AAA13312FA726A164B42ACCAC /* Headers */ = {
+		B4D322A8AD4278B14AF55575EFBD7157 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D98907ED91755D44BAC92E1F40480CB0 /* Pods-NAODemoApplicationUITests-umbrella.h in Headers */,
+				F2B9683E6C35F7220D5DE450D1237DEE /* Pods-NAODemoApplication-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		084C6173D6A57935669602E0B0CEF2D9 /* Pods-NAODemoApplicationUITests */ = {
+		3651449D39C551326F9C656333F2F461 /* Pods-NAODemoApplication */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 40C38CAD35442EAB0581F7265E777D4E /* Build configuration list for PBXNativeTarget "Pods-NAODemoApplicationUITests" */;
+			buildConfigurationList = A6D5ADDE6D41A7F8A64B80A56430634F /* Build configuration list for PBXNativeTarget "Pods-NAODemoApplication" */;
 			buildPhases = (
-				B785C844C5B253D4142CF35A93629056 /* Sources */,
-				3206AD18A5DF7A2460877A4FDD73E23A /* Frameworks */,
-				AFA1D63AAA13312FA726A164B42ACCAC /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-NAODemoApplicationUITests";
-			productName = "Pods-NAODemoApplicationUITests";
-			productReference = EFB8040AA353E7E9DBF46586EF4EDD94 /* Pods_NAODemoApplicationUITests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F2703D5D357B25E72E6B67D06630254E /* Pods-NAODemoApplication */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F0B15E89AAE1E171828C15193A1D2923 /* Build configuration list for PBXNativeTarget "Pods-NAODemoApplication" */;
-			buildPhases = (
-				90A547B947B64CA094381DC52CDF3EFA /* Sources */,
-				39063FB7FAB9C510490F566761B7B545 /* Frameworks */,
-				3D43ECB7E78B782DD5E58BDA063F124F /* Headers */,
+				087F53892A57F1A0A8E4D49009209F49 /* Sources */,
+				55276C194102CF2211DE6D176C45EE87 /* Frameworks */,
+				B4D322A8AD4278B14AF55575EFBD7157 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -289,6 +274,23 @@
 			name = "Pods-NAODemoApplication";
 			productName = "Pods-NAODemoApplication";
 			productReference = E70694C891C30FA805F2C00705C55611 /* Pods_NAODemoApplication.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3BBB0B5A104B02A5C9E15EF9AA6C979E /* Pods-NAODemoApplicationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4402242C189B6ED123D391CF60083FE /* Build configuration list for PBXNativeTarget "Pods-NAODemoApplicationUITests" */;
+			buildPhases = (
+				073E755B3BA2793B3BB4B94240BEAE00 /* Sources */,
+				E0C6BD3C9A43639FDD79639566395DD1 /* Frameworks */,
+				1767DC0ED66497FC717DCB0A7D23C341 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NAODemoApplicationUITests";
+			productName = "Pods-NAODemoApplicationUITests";
+			productReference = EFB8040AA353E7E9DBF46586EF4EDD94 /* Pods_NAODemoApplicationUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -312,26 +314,26 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F2703D5D357B25E72E6B67D06630254E /* Pods-NAODemoApplication */,
-				084C6173D6A57935669602E0B0CEF2D9 /* Pods-NAODemoApplicationUITests */,
+				3651449D39C551326F9C656333F2F461 /* Pods-NAODemoApplication */,
+				3BBB0B5A104B02A5C9E15EF9AA6C979E /* Pods-NAODemoApplicationUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		90A547B947B64CA094381DC52CDF3EFA /* Sources */ = {
+		073E755B3BA2793B3BB4B94240BEAE00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A08F46B5656BA4C5EB13D2C000BFD467 /* Pods-NAODemoApplication-dummy.m in Sources */,
+				E0B6EFF4DE8A77E6DEDBB19A8EBAE4F7 /* Pods-NAODemoApplicationUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B785C844C5B253D4142CF35A93629056 /* Sources */ = {
+		087F53892A57F1A0A8E4D49009209F49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7D58757A3871C588F983EC7C20559EE /* Pods-NAODemoApplicationUITests-dummy.m in Sources */,
+				A4D7D86BA1B1FB6AF70F648FBA8C5C1D /* Pods-NAODemoApplication-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,77 +384,7 @@
 			};
 			name = Debug;
 		};
-		05A921FB4A639B9AE9F0F63FE2DE3395 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BE49EA83B758081325C754F55716FA7 /* Pods-NAODemoApplicationUITests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-NAODemoApplicationUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NAODemoApplicationUITests/Pods-NAODemoApplicationUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_NAODemoApplicationUITests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		10BC9301ECF0BB744CA4BC3E356320BF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A3D6BABA96E232F1D2C26D96532C304 /* Pods-NAODemoApplication.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-NAODemoApplication/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NAODemoApplication/Pods-NAODemoApplication.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_NAODemoApplication;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		36897B665CD110D24C7BF6FCF97D81B6 /* Debug */ = {
+		2F759580BCBEBBD06E4E88F320A8C3DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0978F65FE12AF8A14B4BEB08B3D66121 /* Pods-NAODemoApplication.debug.xcconfig */;
 			buildSettings = {
@@ -479,6 +411,41 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_NAODemoApplication;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3D908BBDE64A76C0A57B8D81CB12C0C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BE49EA83B758081325C754F55716FA7 /* Pods-NAODemoApplicationUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NAODemoApplicationUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NAODemoApplicationUITests/Pods-NAODemoApplicationUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NAODemoApplicationUITests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -527,7 +494,42 @@
 			};
 			name = Release;
 		};
-		5AF13E45718F47F0AE9FBC6D21457B10 /* Release */ = {
+		58F46CCA9D5F77D061BBFBA4BC6FC747 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A3D6BABA96E232F1D2C26D96532C304 /* Pods-NAODemoApplication.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NAODemoApplication/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NAODemoApplication/Pods-NAODemoApplication.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NAODemoApplication;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7E992C11395224D2D4290C8C6D1F271C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E65942034717B9C7F85DC65227BF370C /* Pods-NAODemoApplicationUITests.release.xcconfig */;
 			buildSettings = {
@@ -574,20 +576,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		40C38CAD35442EAB0581F7265E777D4E /* Build configuration list for PBXNativeTarget "Pods-NAODemoApplicationUITests" */ = {
+		A6D5ADDE6D41A7F8A64B80A56430634F /* Build configuration list for PBXNativeTarget "Pods-NAODemoApplication" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				05A921FB4A639B9AE9F0F63FE2DE3395 /* Debug */,
-				5AF13E45718F47F0AE9FBC6D21457B10 /* Release */,
+				2F759580BCBEBBD06E4E88F320A8C3DA /* Debug */,
+				58F46CCA9D5F77D061BBFBA4BC6FC747 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F0B15E89AAE1E171828C15193A1D2923 /* Build configuration list for PBXNativeTarget "Pods-NAODemoApplication" */ = {
+		B4402242C189B6ED123D391CF60083FE /* Build configuration list for PBXNativeTarget "Pods-NAODemoApplicationUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				36897B665CD110D24C7BF6FCF97D81B6 /* Debug */,
-				10BC9301ECF0BB744CA4BC3E356320BF /* Release */,
+				3D908BBDE64A76C0A57B8D81CB12C0C0 /* Debug */,
+				7E992C11395224D2D4290C8C6D1F271C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
