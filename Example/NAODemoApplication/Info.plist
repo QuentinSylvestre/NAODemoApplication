@@ -50,8 +50,6 @@
 	</dict>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>NAOSDK will accesss permanently to your location information</string>
-	<key>NaoLogLevel</key>
-	<integer>1</integer>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>

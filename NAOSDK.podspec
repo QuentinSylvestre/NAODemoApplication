@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NAOSDK'
-  s.version          = "4.3.4.1"
+  s.version          = "4.3.5"
   s.summary          = 'NAOSDK is the Polestar indoor location services SDK.'
 
 # This description is used to generate tags and improve search results.
