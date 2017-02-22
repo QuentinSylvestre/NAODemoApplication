@@ -10,7 +10,16 @@ This page describes how to integrate NAOSDK into your application using CocoaPod
 * iOS 8.0 or higher
 * [CocoaPods](http://cocoapods.org/) package manager:
 
-##Install
+# Building demo application
+To run the provided sample project (NAODemoApplication), clone or download this repo, and run:
+```bash
+$ cd Example
+$ pod install
+$ open NAODemoApplication.xcworkspace
+
+```
+
+#Install
 
 ```
 #!bash
@@ -68,14 +77,4 @@ $ open App.xcworkspace
 
 ```
 
-Then, [configure your Xcode project](http://docs.nao-cloud.com/dev/Getting_started/NAO_SDK_iOS/#configure-your-xcode-project/).
-
-
-# Building demo application
-To run the provided sample project (NAODemoApplication), clone or download this repo, and run:
-```bash
-$ cd Example
-$ pod install
-$ open NAODemoApplication.xcworkspace
-
-```
+Then, [configure your Xcode project](http://docs.nao-cloud.com/index.php/docs/nao-sdk/ios-sdk/configure-your-xcode-project/).
