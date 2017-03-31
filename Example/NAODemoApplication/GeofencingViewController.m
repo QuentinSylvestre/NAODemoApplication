@@ -144,7 +144,6 @@
     NSLog(@"NAODemoApp : %@ : %@ : %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), alertText);
     [self.notificationManager displayNotificationWithMessage:[NSString stringWithFormat:@"%@ : %@", NSStringFromSelector(_cmd), alertText]];
     
-    NAOGeofenceData *regiondata = [self.geofencingHandle getGeofenceData:[alert.rules objectAtIndex:0].regionId];
 }
 
 - (void) didFailWithErrorCode:(DBNAOERRORCODE)errCode andMessage:(NSString *)message {

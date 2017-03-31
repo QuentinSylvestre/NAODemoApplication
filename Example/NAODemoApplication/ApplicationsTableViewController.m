@@ -16,7 +16,7 @@
 @implementation ApplicationsTableViewController
 
 @synthesize services;
-@synthesize indoorLocationService, geofencingService, beaconProximityService, analyticsService, beaconReportingService, wakeService, allServices;
+@synthesize indoorLocationService, geofencingService, beaconProximityService, analyticsService, beaconReportingService, wakeService, allServices, uploadNaoLogInfo;
 
 
 
@@ -31,6 +31,8 @@
     beaconReportingService = @"BeaconReporting";
     wakeService = @"WakeService";
     allServices = @"AllServices";
+    uploadNaoLogInfo = @"UplaodNaoLogInfo";
+    
 
     [services addObject:indoorLocationService];
     [services addObject:geofencingService];
@@ -39,6 +41,7 @@
     [services addObject:beaconReportingService];
     [services addObject:wakeService];
     [services addObject:allServices];
+    [services addObject:uploadNaoLogInfo];
     
     NSString *key = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
     if (key == nil || [key isEqualToString:DEFAULT_KEY_VALUE] == NO) {
@@ -116,6 +119,18 @@
     if ([[self.services objectAtIndex:indexPath.row] isEqualToString:allServices]) {
         NSLog(@"%@",allServices);
         [self performSegueWithIdentifier:@"AllServicesSegue" sender:self];
+    }
+    
+    if ([[self.services objectAtIndex:indexPath.row] isEqualToString:uploadNaoLogInfo]) {
+        NSLog(@"%@",uploadNaoLogInfo);
+        [NAOServicesConfig uploadNAOLogInfo];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Upload NAO logs info scheduled"
+                                                        message:@""
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
     }
 }
 

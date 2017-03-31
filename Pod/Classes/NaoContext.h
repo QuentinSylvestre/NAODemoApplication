@@ -10,9 +10,14 @@
 #import "DBTPOWERMODE.h"
 #import "NAOSyncDelegate.h"
 
+
+
 @class PSTINAOServiceManager;
 @class NAOSensorsManager;
 @class NaoSynchroBroker;
+@class ServiceHttpHelper;
+@class ServicePrefHelper;
+@class ServiceConnectivityHelper;
 
 /** For Polestar internal use */
 @interface NaoContext : NSObject
@@ -20,6 +25,9 @@
 @property (strong) PSTINAOServiceManager *serviceManager;
 @property (strong) NAOSensorsManager *sensorsManager;
 @property (strong) NaoSynchroBroker *synchroBroker;
+@property (strong) ServiceHttpHelper *httpHelper;
+@property (strong) ServicePrefHelper *prefHelper;
+@property (strong) ServiceConnectivityHelper *connectivityHelper;
 @property (strong, nonatomic) NSString *mRootURL;
 
 - (id)init;

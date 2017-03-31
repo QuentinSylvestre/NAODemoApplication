@@ -30,6 +30,8 @@
     locationLabel.text = @"Location:longitude, latitude, altitude, heading";
     statusLabel.text = @"Status: status";
     
+    //[NAOServicesConfig setRootURL:@"http://31.11.49.181/ncsapps"];
+    
     if (self.locationHandle == nil) {
         [self startWaiting];
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <NAOSDK/NAOSDK.h>
 // #define DEFAULT_KEY_VALUE @"YOUR_APP_KEY"
 #ifndef DEFAULT_KEY_VALUE
 #  error "Please uncomment the line above, and set your API key (or use the provided key)."
@@ -22,5 +23,6 @@
 @property (nonatomic) NSString* beaconReportingService;
 @property (nonatomic) NSString* wakeService;
 @property (nonatomic) NSString* allServices;
+@property (nonatomic) NSString* uploadNaoLogInfo;
 
 @end
