@@ -206,7 +206,7 @@
 
 - (void) didLocationChange:(CLLocation *)location {
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.locationLabel.text = [NSString stringWithFormat:@"Location: %.6f,%.6f,%.3f,%.2f, accuracy : %.2f", location.coordinate.longitude, location.coordinate.latitude, location.altitude, location.course, location.horizontalAccuracy];
+        self.locationLabel.text = [NSString stringWithFormat:@"Location: %.6f,%.6f,%.3f,%.2f, accuracy : %.2f, verticalAccuracy : %.2f", location.coordinate.longitude, location.coordinate.latitude, location.altitude, location.course, location.horizontalAccuracy,location.verticalAccuracy];
     });
 }
 
