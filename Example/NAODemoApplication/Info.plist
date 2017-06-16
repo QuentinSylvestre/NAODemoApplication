@@ -50,9 +50,10 @@
 	</dict>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>NAOSDK will accesss permanently to your location information</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>NAOSDK will accesss permanently to your location information</string>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>bluetooth-central</string>
 		<string>location</string>
 		<string>remote-notification</string>
 	</array>
