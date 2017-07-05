@@ -32,7 +32,7 @@ The following services are available in NAOSDK:
   s.author           = { 'Pole Star' => 'support@polestar.eu' }
   s.source           = { :git => 'https://bitbucket.org/polestarusa/naosdk.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
 # build
   s.libraries = "c++", "z"
