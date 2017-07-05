@@ -175,14 +175,20 @@
 - (void)onEnterBackground {
     NSLog(@"NAODemoApp : %@ : %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
     if (self.locationHandle != nil) {
-        [self.locationHandle setPowerMode:DBTPOWERMODE_LOW];
+        [self.locationHandle stop];
     }
 }
 
 - (void)onEnterForeground {
     NSLog(@"NAODemoApp : %@ : %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
     if (self.locationHandle != nil) {
-        [self.locationHandle setPowerMode:DBTPOWERMODE_HIGH];
+        // Delay execution of my block for 10 seconds.
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            [self.locationHandle start];
+
+        });
+
+        //[self.locationHandle start];
     }
 }
 
